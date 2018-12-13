@@ -4,9 +4,22 @@ I want a project to showcase a variety of front-end web technologies.
 
 ## The List
 
-- Angular 
+- Angular 6
+  - Typescript
+  - NPM
 - PWA
 
+
+# Performance Marks
+
+**12-12-18**
+Boilerplate Angular CLI application with angular-pwa
+
+Regular WIFI (122.3 Mbps download speed)
+![alt text](/readme_assets/performance/2018-12-12-wifi.png)
+
+Slow 3G
+![alt text](/readme_assets/performance/2018-12-12-3g.png)
 
 # Notes
 
