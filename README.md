@@ -1,4 +1,4 @@
-# TechShowcase
+# Exhibit A
 
 I want a project to showcase a variety of front-end web technologies.
 
