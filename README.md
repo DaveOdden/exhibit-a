@@ -9,6 +9,18 @@ I want a project to showcase a variety of front-end web technologies.
   - NPM
 - PWA
 
+## Coming Plans
+
+- Google Auth 
+- Custom Elements
+- Web Components
+- Router
+- Forms
+- APIs
+- Large Lists
+- 
+- Infinite Scroll?
+
 
 # Performance Marks
 
