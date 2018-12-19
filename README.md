@@ -37,7 +37,7 @@ Slow 3G
 **12-12-2018**
 Boilerplate Angular CLI application with angular-pwa
 
-Regular WIFI (122.3 Mbps download speed)
+Regular WIFI (122.3 Mbps download speed)       
 <img src="readme_assets/performance/2018-12-12-wifi.png" alt="metric" width="500"/>
 
 Slow 3G                          
