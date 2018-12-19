@@ -17,8 +17,7 @@ I want a project to showcase a variety of front-end web technologies.
 - Router
 - Forms
 - APIs
-- Large Lists
-- 
+- Large Lists`
 - Infinite Scroll?
 
 

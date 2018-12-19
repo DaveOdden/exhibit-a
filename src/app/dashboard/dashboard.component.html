@@ -1,0 +1,61 @@
+<div *ngIf="viewIsLoading">Loading...</div>
+
+<!-- Statuses -->
+<div>
+  <ul class="side-by-side-list">
+
+    <!-- Loading Status -->
+    <li>
+      <div class="data-key">viewIsLoading</div>
+      <div class="data-value">{{ viewIsLoading }}</div>
+    </li>
+
+    <!-- Loading Status -->
+    <li>
+      <div class="data-key">authIsLoading</div>
+      <div class="data-value">{{ authIsLoading }}</div>
+    </li>
+
+    <!-- Logged In Status -->
+    <li>
+      <div class="data-key">userIsLoggedIn</div>
+      <div class="data-value">{{ userIsLoggedIn }}</div>
+    </li>
+
+    <!-- User Data Present -->
+    <li>
+      <div class="data-key">User Data Present</div>
+      <div class="data-value">
+        <span *ngIf="user">
+            {{ user.id.length > 0 }}
+        </span>
+        <span *ngIf="!user">
+            false
+        </span>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+<div *ngIf="!authIsLoading">
+
+  <!-- Sign In Module -->
+  <div *ngIf="!viewIsLoading && !userIsLoggedIn">
+    <h1>Sign In</h1>
+    <button (click)="googleSignIn()">Sign in with Google</button>
+  </div>
+
+  <!-- Authenticated Content -->
+  <div *ngIf="!viewIsLoading && userIsLoggedIn">
+    <button (click)="googleSignOut()">Sign Out</button>
+    <h3>Authentication Details</h3>
+    <ul class="side-by-side-list">
+      <li *ngFor="let item of googleUserData">
+        <div class="data-key">{{ item.key }}</div>
+        <div class="data-value">{{ item.val }}</div>
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	font-family: Helvetica;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.side-by-side-list {
+	padding: 0 2rem;
+}
+
+	.side-by-side-list > li {
+		display: flex;
+		margin: 0;
+		padding: 1rem 0;
+		border-bottom: 1px solid #eee;
+	}
+
+		.side-by-side-list .data-key {
+			text-align: right;
+			min-width: 100px;
+			font-weight: 600;
+			color: #000;
+		}
+
+		.side-by-side-list .data-value {
+			flex-grow: 2;
+			margin-left: 1rem;
+			max-width: 90%;
+			overflow-x: scroll;
+			color: #666;
+		}
