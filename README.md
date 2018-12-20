@@ -46,4 +46,6 @@ Slow 3G
 
 # Notes
 
-- Needed to update the base url in index.html in order for prod build to work (apache and http-server)
+- Needed to update the base url in index.html in order for prod build to work (apache and http-server).
+- Revision 393987 - To Read a JSON file in TS, a type declaration is needed for a successful import.
+  - https://hackernoon.com/import-json-into-typescript-8d465beded79
