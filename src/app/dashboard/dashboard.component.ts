@@ -9,18 +9,21 @@ import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
 
 export class DashboardComponent implements OnInit {
 
-	user;
-	userIsLoggedIn: boolean = false;
+	authIsRetrieved: boolean = false;
 	viewIsLoading: boolean = true;
 	authIsLoading: boolean = true;
-  googleUserData = [];
+	userIsLoggedIn: boolean = false;
+	googleUserData = [];
+	user;
 
   constructor( private socialAuthService: AuthService ) {
 		this.socialAuthService.authState.subscribe((user) => {
+			console.log(user);
       this.user = user;
 			this.userIsLoggedIn = (user != null);
 			this.googleUserData = user !== null ? this.createKeyVals(user) : [];
 			this.authIsLoading = user !== null ? false : true;
+			this.authIsRetrieved = user !== null ? false : true;
     });
   }
 

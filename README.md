@@ -8,10 +8,10 @@ I want a project to showcase a variety of front-end web technologies.
   - Typescript
   - NPM
 - PWA
+- Google Auth 
 
 ## Coming Plans
 
-- Google Auth 
 - Custom Elements
 - Web Components
 - Router
