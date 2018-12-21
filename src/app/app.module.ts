@@ -1,6 +1,6 @@
 // Boilerplate
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -48,6 +48,7 @@ export function getAuthServiceConfigs() {
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs
   }],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

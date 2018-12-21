@@ -18,7 +18,6 @@ export class DashboardComponent implements OnInit {
 
   constructor( private socialAuthService: AuthService ) {
 		this.socialAuthService.authState.subscribe((user) => {
-			console.log(user);
       this.user = user;
 			this.userIsLoggedIn = (user != null);
 			this.googleUserData = user !== null ? this.createKeyVals(user) : [];
