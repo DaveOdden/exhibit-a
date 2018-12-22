@@ -1,9 +1,9 @@
 // Boilerplate
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Third-Party
 import {
@@ -12,13 +12,14 @@ import {
   GoogleLoginProvider,
 } from "angular-6-social-login";
 
-// Custom
-import { DashboardComponent } from './dashboard/dashboard.component';
+// Components
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatusComponent } from './status/status.component';
-import { AppHeaderDirective } from './__elements/app-header/app-header.directive';
 
 import * as secrets from '../../credentials.json';
+import { AppHeaderComponent } from './__elements/app-header/app-header.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -36,7 +37,7 @@ export function getAuthServiceConfigs() {
     AppComponent,
     DashboardComponent,
     StatusComponent,
-    AppHeaderDirective
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
