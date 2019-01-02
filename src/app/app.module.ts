@@ -20,6 +20,8 @@ import { StatusComponent } from './status/status.component';
 
 import * as secrets from '../../credentials.json';
 import { AppHeaderComponent } from './__elements/app-header/app-header.component';
+import { DateTraversalComponent } from './__elements/date-traversal/date-traversal.component';
+import { LoginComponent } from './login/login.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -37,7 +39,9 @@ export function getAuthServiceConfigs() {
     AppComponent,
     DashboardComponent,
     StatusComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    DateTraversalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

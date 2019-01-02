@@ -1,13 +1,25 @@
-<header>
-	<h1>{{title}}</h1>
-	<button class="header-btn header-primary-btn icon-directions">
-    <iron-icon icon="lumo:angle-down"></iron-icon>
-  </button>
-	<button class="header-btn header-secondary-btn icon-settings"></button>
+<header class="app-header">
+
+	<!-- Header -->
+	<div class="app-header__title">
+		<h1>{{title}}</h1>
+	</div>
+
+	<!-- Left Button Icon -->
+	<button class="app-header__btn app-header__btn--primary icon-directions">
+    <iron-icon icon="lumo:menu"></iron-icon>
+	</button>
+	
+	<!-- Right Button Icon -->
+	<button class="app-header__btn app-header__btn--secondary icon-settings">
+		<iron-icon icon="lumo:cog"></iron-icon>
+	</button>
+
 	<nav class="view-navigation">
 		<a>Day</a>
 		<a>Week</a>
-		<a>Month</a>
+		<a class="is-selected">Month</a>
 		<a>Year</a>
 	</nav>
+
 </header>

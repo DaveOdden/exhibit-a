@@ -1,45 +1,41 @@
 
-header {
+:host .app-header {
 	width: 100%;
 	z-index: 10;
-	position: fixed;
+	position: relative;
 	background-color: #4A4E57;
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	transition: all .175s ease-in-out;
 }
 
-h1 {
-	margin: .75em auto;
-	padding: 0;
-	font-weight: normal;
-	text-align: center;
-	font-size: 1.175em;
+:host .app-header__title {
+	padding: 1rem 0;
 }
 
-header h1 {
+:host .app-header__title h1 {
+	margin: 0;
 	color: #fff;
-	padding-top: .25em;
+	padding: 2rem auto;
+	font-size: 1.175em;
+	font-weight: normal;
+	text-align: center;
 	text-transform: capitalize;
 }
 
-.header-btn {
+:host .app-header__btn {
 	color: white;
 	float: left;
 	border: none;
 	background: transparent;
 	margin: 0;
-	margin-top: -1.75em;
-	padding: 0 .75em;
-	font-size: 1.25em;
+	margin-top: -2.5725rem;
+	padding: 0 .75rem;
+	font-size: 1.25rem;
 	cursor: pointer;
 	cursor: hand;
 }
 
-.header-navigation-btn {
-
-}
-
-.header-secondary-btn {
+:host .app-header__btn--secondary {
 	float: right;
 }
 
@@ -47,6 +43,7 @@ header h1 {
 	width: 90%;
 	margin: 0 auto;
 	padding: 0;
+	padding-bottom: .475rem;
 	text-align: center;
 	display: -webkit-flex;
 	display: flex;
@@ -62,6 +59,9 @@ header h1 {
 	border-bottom: 2px solid transparent;
 	-webkit-flex: 1;
 	flex: 1;
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .view-navigation a.is-selected {
