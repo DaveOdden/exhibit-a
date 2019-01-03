@@ -8,17 +8,20 @@ I want a project to showcase a variety of front-end web technologies.
   - Typescript
   - NPM
 - PWA
-- Google Auth 
+- Google Auth
+- Custom Angular Components/Elements
+- Web Components
+- Router
 
 ## Coming Plans
 
-- Custom Elements
-- Web Components
-- Router
-- Forms
-- APIs
-- Large Lists
+- Vaadin Forms
+- API Services
+- Micro Interactions
   - Infinite Scroll?
+- Route Transitions
+- Session Handling in Node
+
 
 
 # Performance Metrics
