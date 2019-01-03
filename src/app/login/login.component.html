@@ -1,3 +1,23 @@
+<app-app-header></app-app-header>
+
+<!-- Sign In Module -->
+<div *ngIf="!viewIsLoading && !userIsLoggedIn">
+  <h1>Sign In</h1>
+  <vaadin-button theme="primary" (click)="googleSignIn()">Sign in with Google</vaadin-button>
+</div>
+
+<!-- Authenticated Content -->
+<div *ngIf="!viewIsLoading && userIsLoggedIn">
+  <vaadin-button theme="primary" (click)="googleSignOut()">Sign Out</vaadin-button>
+  <h3>Authentication Details</h3>
+  <ul class="side-by-side-list">
+    <li *ngFor="let item of googleUserData">
+      <div class="data-key">{{ item.key }}</div>
+      <div class="data-value">{{ item.val }}</div>
+    </li>
+  </ul>
+</div>
+
 <div class="card mt-5" style="margin:auto;width: 600px;">
   <div class="card-body">
     <h5 class="card-title">Login</h5>

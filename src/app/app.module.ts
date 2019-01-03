@@ -1,3 +1,13 @@
+const _customElementsDefine = window.customElements.define;
+window.customElements.define = (name, cl, conf) => {
+  if (!customElements.get(name)) {
+    _customElementsDefine.call(window.customElements, name, cl, conf);
+  }
+  else {
+    console.warn(`${name} has been defined twice`);
+  }
+};
+
 // Boilerplate
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -22,6 +32,10 @@ import * as secrets from '../../credentials.json';
 import { AppHeaderComponent } from './__elements/app-header/app-header.component';
 import { DateTraversalComponent } from './__elements/date-traversal/date-traversal.component';
 import { LoginComponent } from './login/login.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
+import { MicroInteractionsDisableBtnDuringApiCallComponent } from './micro-interactions-disable-btn-during-api-call/micro-interactions-disable-btn-during-api-call.component';
+import { MicroInteractionsSelectionListComponent } from './micro-interactions-selection-list/micro-interactions-selection-list.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -41,7 +55,11 @@ export function getAuthServiceConfigs() {
     StatusComponent,
     AppHeaderComponent,
     DateTraversalComponent,
-    LoginComponent
+    LoginComponent,
+    NavMenuComponent,
+    MicroInteractionsComponent,
+    MicroInteractionsDisableBtnDuringApiCallComponent,
+    MicroInteractionsSelectionListComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +76,5 @@ export function getAuthServiceConfigs() {
 })
 export class AppModule { 
   constructor() {
-    console.log(secrets.default.web.client_id);
   }
 }

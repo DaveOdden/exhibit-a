@@ -1,6 +1,6 @@
 <div *ngIf="viewIsLoading">Loading...</div>
 
-<a [routerLink]="['/status']">Status</a>
+<app-app-header></app-app-header>
 
 <!-- Statuses -->
 <div>
@@ -39,21 +39,3 @@
     
   </ul>
 </div>
-
-  <!-- Sign In Module -->
-  <div *ngIf="!viewIsLoading && !userIsLoggedIn">
-    <h1>Sign In</h1>
-    <vaadin-button (click)="googleSignIn()">Sign in with Google</vaadin-button>
-  </div>
-
-  <!-- Authenticated Content -->
-  <div *ngIf="!viewIsLoading && userIsLoggedIn">
-    <vaadin-button (click)="googleSignOut()">Sign Out</vaadin-button>
-    <h3>Authentication Details</h3>
-    <ul class="side-by-side-list">
-      <li *ngFor="let item of googleUserData">
-        <div class="data-key">{{ item.key }}</div>
-        <div class="data-value">{{ item.val }}</div>
-      </li>
-    </ul>
-  </div>

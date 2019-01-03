@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
-
+import '@vaadin/vaadin-button';
 
 @Component({
   selector: 'app-root',
