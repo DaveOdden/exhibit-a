@@ -27,10 +27,10 @@ I want a project to showcase a variety of front-end web technologies.
 > Google Auth implementation
 
 Regular WIFI (122.3 Mbps download speed)       
-<img src="readme_assets/performance/2018-12-19-wifi.png" alt="metric" width="500"/>
+<img src="src/assets/readme/performance/2018-12-19-wifi.png" alt="metric" width="500"/>
 
 Slow 3G                          
-<img src="readme_assets/performance/2018-12-19-3g.png" alt="metric" width="500"/>
+<img src="src/assets/readme/performance/2018-12-19-3g.png" alt="metric" width="500"/>
 
 
 ---
@@ -39,10 +39,10 @@ Slow 3G
 > Boilerplate Angular CLI application with angular-pwa
 
 Regular WIFI (122.3 Mbps download speed)       
-<img src="readme_assets/performance/2018-12-12-wifi.png" alt="metric" width="500"/>
+<img src="src/assets/readme/performance/2018-12-12-wifi.png" alt="metric" width="500"/>
 
 Slow 3G                          
-<img src="readme_assets/performance/2018-12-12-3g.png" alt="metric" width="500"/>
+<img src="src/assets/readme/performance/2018-12-12-3g.png" alt="metric" width="500"/>
 
 # Notes
 
