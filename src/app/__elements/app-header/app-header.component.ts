@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-app-header',
@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHeaderComponent implements OnInit {
 
-  title = 'Exhibit-A';
+  @Input() secondaryNavItems: Array<string> = [];
+  @Input() headerTitle: string;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

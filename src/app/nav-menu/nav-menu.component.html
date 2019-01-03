@@ -1,5 +1,7 @@
-<ul>
-  <li [routerLink]="['/dashboard']">Dashboard</li>
-  <li [routerLink]="['/status']">App Status</li>
-  <li [routerLink]="['/micro-interactions']">Micro Interactions</li>
-</ul>
+<div class="space-xl">
+  <vaadin-list-box selected="0">
+    <vaadin-item [routerLink]="['/dashboard']" aria-selected="true">Dashboard</vaadin-item>
+    <vaadin-item [routerLink]="['/status']">App Status</vaadin-item>
+    <vaadin-item [routerLink]="['/micro-interactions']">Micro Interactions</vaadin-item>
+  </vaadin-list-box>
+</div>

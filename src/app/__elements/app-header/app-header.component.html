@@ -2,24 +2,21 @@
 
 	<!-- Header -->
 	<div class="app-header__title">
-		<h1>{{title}}</h1>
+		<h1>{{headerTitle}}</h1>
 	</div>
 
 	<!-- Left Button Icon -->
 	<button class="app-header__btn app-header__btn--primary icon-directions" [routerLink]="['/nav-menu']">
-    <iron-icon icon="lumo:menu"></iron-icon>
+    <iron-icon icon="lumo:menu">M</iron-icon>
 	</button>
 	
 	<!-- Right Button Icon -->
 	<button class="app-header__btn app-header__btn--secondary icon-settings" [routerLink]="['/dashboard']">
-		<iron-icon icon="lumo:cog"></iron-icon>
+		<iron-icon icon="lumo:cog">S</iron-icon>
 	</button>
 
-	<nav class="view-navigation">
-		<a>Day</a>
-		<a>Week</a>
-		<a class="is-selected">Month</a>
-		<a>Year</a>
+	<nav class="view-navigation" *ngIf="secondaryNavItems.length">
+		<a *ngFor="let item of secondaryNavItems">{{item}}</a>
 	</nav>
 
 </header>

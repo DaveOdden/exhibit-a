@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
-import '@vaadin/vaadin-button';
+
+import '@vaadin/vaadin-item/vaadin-item';
+import '@vaadin/vaadin-grid/vaadin-grid';
+import '@vaadin/vaadin-text-field/vaadin-text-field.js';
+import '@vaadin/vaadin-list-box/vaadin-list-box.js';
 
 @Component({
   selector: 'app-root',

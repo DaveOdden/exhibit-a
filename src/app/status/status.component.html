@@ -1,5 +1,4 @@
-<app-app-header></app-app-header>
-<app-date-traversal></app-date-traversal>
+<app-app-header headerTitle="App Status" [secondaryNavItems]="['day','week','month','year']"></app-app-header>
 
 <div *ngIf="userIsLoggedIn">
 	User is logged in

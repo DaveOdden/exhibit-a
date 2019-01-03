@@ -1,11 +1,9 @@
 
-
-/* body {
-	font-family: Helvetica;
-} */
-
 body {
 	margin: 0;
+	font-family: var(--lumo-font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ul {
@@ -38,3 +36,30 @@ ul {
 			overflow-x: scroll;
 			color: #666;
 		}
+
+
+
+
+
+
+
+
+		.space-xs {
+      padding: var(--lumo-space-xs);
+    }
+
+    .space-s {
+      padding: var(--lumo-space-s);
+    }
+
+    .space-m {
+      padding: var(--lumo-space-m);
+    }
+
+    .space-l {
+      padding: var(--lumo-space-l);
+    }
+
+    .space-xl {
+      padding: var(--lumo-space-xl);
+    }
