@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "vaadin-lumo-styles": "vaadin/vaadin-lumo-styles#^1.3.3",
-    "simple-line-icons": "^2.4.1"
+    "vaadin-lumo-styles": "vaadin/vaadin-lumo-styles#^1.3.3"
   }
 }
