@@ -1,6 +1,6 @@
 # Exhibit A
 
-I want a project to showcase a variety of front-end web technologies.
+I want a project to showcase a variety of technologies in Angular.
 
 ## The List
 
@@ -8,19 +8,27 @@ I want a project to showcase a variety of front-end web technologies.
   - Typescript
   - NPM
 - PWA
-- Google Auth
+- Google Authentication
 - Custom Angular Components/Elements
 - Web Components
-- Router
+- Router Navigation
 
 ## Coming Plans
 
-- Vaadin Forms
+- Font Icons
+- Animated Route Transitions
+- Heroku Connection
+- PWA: Offline Mode & Service Workers
+- PWA: Push Notifications
 - API Services
 - Micro Interactions
+  - Disable Button On API Call
+  - New List Item Entrance
   - Infinite Scroll?
+  - Error Messages
 - Route Transitions
 - Session Handling in Node
+- Vaadin Forms
 
 
 
