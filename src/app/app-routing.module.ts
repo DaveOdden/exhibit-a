@@ -10,6 +10,7 @@ import { MicroInteractionsDisableBtnDuringApiCallComponent } from './micro-inter
 import { MicroInteractionsSelectionListComponent } from './micro-interactions-selection-list/micro-interactions-selection-list.component';
 
 const routes: Routes = [
+  { path: '', component: StatusComponent },
   { path: 'login', component: LoginComponent },
   { path: 'status', component: StatusComponent },
   { path: 'dashboard', component: DashboardComponent },
