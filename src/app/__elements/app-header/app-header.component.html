@@ -2,18 +2,14 @@
 
 	<!-- Header -->
 	<div class="app-header__title">
-		<h1>{{headerTitle}} 		<i class="icon-direction"></i>		</h1>
+		<h1>{{headerTitle}}</h1>
 	</div>
 
 	<!-- Left Button Icon -->
-	<button class="app-header__btn app-header__btn--primary icon-direction" [routerLink]="['/nav-menu']">
-		<iron-icon icon="lumo:cog">M</iron-icon>
-	</button>
+	<button class="app-header__btn app-header__btn--primary icon-direction" [routerLink]="['/nav-menu']"></button>
 	
 	<!-- Right Button Icon -->
-	<button class="app-header__btn app-header__btn--secondary icon-settings" [routerLink]="['/dashboard']">
-		<iron-icon icon="lumo:cog">S</iron-icon>
-	</button>
+	<button class="app-header__btn app-header__btn--secondary icon-settings" [routerLink]="['/dashboard']"></button>
 
 	<nav class="view-navigation" *ngIf="secondaryNavItems.length">
 		<a *ngFor="let item of secondaryNavItems">{{item}}</a>
