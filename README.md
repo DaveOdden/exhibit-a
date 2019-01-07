@@ -41,7 +41,9 @@ I want a project to showcase a variety of technologies in Angular.
 			- Tag
 	- Obligatory Bill Reminder Feature
 	- Transactions Management
+		- Configure recurring payments/bils
 		- Apply a returned item flag on all or part of a transaction
+		- Concealed transaction flag
 	- Purchase History Breakdown
 		- Spending by project, group, hobby, activity, etc..
 			- See how much you've spent on your renovation, car restoration, and other projects or hobbies.
