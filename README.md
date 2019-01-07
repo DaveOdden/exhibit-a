@@ -5,18 +5,21 @@ I want a project to showcase a variety of technologies in Angular.
 ## The List
 
 - Angular 6
+	- CLI
   - Typescript
   - NPM
+	- Karma
+	- Custom Components/Elements
+	- Router
+	- Route Transitions
+- Git
 - PWA
 - Google Authentication
-- Custom Angular Components/Elements
 - Web Components
-- Router Navigation
 
 ## Coming Plans
 
 - Font Icons
-- Animated Route Transitions
 - API Services
 - Heroku Connection
 - Micro Interactions
@@ -52,6 +55,7 @@ I want a project to showcase a variety of technologies in Angular.
 		- Spending by tag
 		- Spending by merchant
 			- Pie chart of top spending groups by merchant
+		- Spending by credit/debit card
 		- How much has been spent on tax?
 		- No spending streaks
 		- Analytical insights on spending
