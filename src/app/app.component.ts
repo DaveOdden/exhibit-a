@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
-
+import { routerTransition } from './app-route.animations';
 import '@vaadin/vaadin-item/vaadin-item';
 import '@vaadin/vaadin-grid/vaadin-grid';
 import '@vaadin/vaadin-text-field/vaadin-text-field.js';
@@ -8,6 +8,7 @@ import '@vaadin/vaadin-list-box/vaadin-list-box.js';
 
 @Component({
   selector: 'app-root',
+  animations: [ routerTransition ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -26,4 +27,9 @@ export class AppComponent {
 		// 	this.authIsLoading = user !== null ? false : true;
     // });
   }
+
+  prepareRoute(outlet: any) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+
 }
