@@ -60,9 +60,9 @@ I want a project to showcase a variety of technologies in Angular.
 		- No spending streaks
 		- Analytical insights on spending
 			- e.g. "you spent 3x more this week at starbucks than you have for the past 3 weeks...", etc. 
-			- NOTE: able to add exceptions for purchases that would tip the scales and generate false positives
-			- NOTE: enable a way to track how much has been save through coupons, rewards, gifts, or free items
-			- NOTE: add a feature to allow the user to configure custom attributes that can be used to filter on and analyze 
+		- NOTE: able to add exceptions for purchases that would tip the scales and generate false positives
+		- NOTE: enable a way to track how much has been save through coupons, rewards, gifts, or free items
+		- NOTE: add a feature to allow the user to configure custom attributes that can be used to filter on and analyze 
 - Recruiter Communication Tracker App
 - Medication Consumption Tracker App
 
