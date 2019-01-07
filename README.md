@@ -6,8 +6,8 @@ I want a project to showcase a variety of technologies in Angular.
 
 - Angular 6
 	- CLI
-  - Typescript
-  - NPM
+	- Typescript
+	- NPM
 	- Karma
 	- Custom Components/Elements
 	- Router
