@@ -17,18 +17,48 @@ I want a project to showcase a variety of technologies in Angular.
 
 - Font Icons
 - Animated Route Transitions
-- Heroku Connection
-- PWA: Offline Mode & Service Workers
-- PWA: Push Notifications
 - API Services
+- Heroku Connection
 - Micro Interactions
   - Disable Button On API Call
   - New List Item Entrance
   - Infinite Scroll?
   - Error Messages
-- Route Transitions
-- Session Handling in Node
+- PWA: Offline Mode & Service Workers
+- PWA: Push Notifications
 - Vaadin Forms
+- Session Handling in Node
+- Finance App - Ultimate Insight on Spending
+	- CRUD
+		- Read
+		- Create
+			- Merchant
+			- Items
+				- Cost Per, Free, Rewards, etc.
+			- Sub Total
+			- Grand Total (generate tax rate programmatically)
+			- Category
+			- Tag
+	- Obligatory Bill Reminder Feature
+	- Transactions Management
+		- Apply a returned item flag on all or part of a transaction
+	- Purchase History Breakdown
+		- Spending by project, group, hobby, activity, etc..
+			- See how much you've spent on your renovation, car restoration, and other projects or hobbies.
+	  - Spending by category
+			- Spending by category (or all) comparisons by day, week, month, year, or random
+		- Spending by tag
+		- Spending by merchant
+			- Pie chart of top spending groups by merchant
+		- How much has been spent on tax?
+	  - No spending streaks
+		- Analytical insights on spending
+			- e.g. "you spent 3x more this week at starbucks than you have for the past 3 weeks...", etc. 
+			NOTE: able to add exceptions for purchases that would tip the scales and generate false positives
+			NOTE: enable a way to track how much has been save through coupons, rewards, gifts, or free items
+			NOTE: add a feature to allow the user to configure custom attributes that can be used to filter on and analyze 
+- Recruiter Communication Tracker App
+- Medication Consumption Tracker App
 
 
 
