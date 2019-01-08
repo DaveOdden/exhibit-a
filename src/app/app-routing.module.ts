@@ -11,18 +11,18 @@ import { MicroInteractionsSelectionListComponent } from './micro-interactions-se
 
 const routes: Routes = [
   { path: '', component: StatusComponent },
-  { path: 'login', component: LoginComponent, data: {animation: 'status'} },
-  { path: 'status', component: StatusComponent, data: {animation: 'dashboard'} },
+  { path: 'login', component: LoginComponent, data: { animation: 'login' } },
+  { path: 'status', component: StatusComponent, data: { animation: 'login' } },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'micro-interactions',
     component: MicroInteractionsComponent,
-    data: {animation: 'nav-menu'},
+    data: { animation: 'login' },
     children: [
       { path: '', component: MicroInteractionsSelectionListComponent },
       { path: 'disable-btn-during-api-call', component: MicroInteractionsDisableBtnDuringApiCallComponent }
     ]
   },
-  { path: 'nav-menu', component: NavMenuComponent, data: {animation: ''}, }
+  { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'status' }, }
 ];
 
 @NgModule({
