@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-micro-interactions',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MicroInteractionsComponent implements OnInit {
 
-  constructor() { }
+  //@Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
-  ngOnInit() {
+  constructor() {
+    //this.notify.emit("back");
   }
 
+  ngOnInit() {
+
+  }
 }

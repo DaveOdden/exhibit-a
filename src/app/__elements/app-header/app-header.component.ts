@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { HeaderStateService } from "./header-state.service";
 
 @Component({
   selector: 'app-app-header',
@@ -9,11 +10,18 @@ export class AppHeaderComponent implements OnInit {
 
   @Input() secondaryNavItems: Array<string> = [];
   @Input() headerTitle: string;
+  @Input() goBack: boolean;
 
-  constructor() { }
+  heroes: string;
+
+  constructor( HeaderService: HeaderStateService ) {
+    HeaderService.getData().subscribe( heroes => {
+      console.log("subscribed: " + heroes);
+      this.heroes = heroes
+    } );
+  }
 
   ngOnInit() {
-
   }
 
 }

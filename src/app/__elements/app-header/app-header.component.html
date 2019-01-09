@@ -5,11 +5,22 @@
 		<h1>{{headerTitle}}</h1>
 	</div>
 
-	<!-- Left Button Icon -->
-	<button class="app-header__btn app-header__btn--primary icon-direction" [routerLink]="['/nav-menu']"></button>
+	<!-- Navigation Button -->
+	<button [routerLink]="['/nav-menu']"
+					class="app-header__btn app-header__btn--primary icon-directions"
+					*ngIf="!goBack">
+	</button>
+
+	<!-- Back Button -->
+	<button [routerLink]="['/nav-menu']"
+					class="app-header__btn app-header__btn--primary icon-arrow-left"
+					*ngIf="goBack">
+	</button>
 	
-	<!-- Right Button Icon -->
-	<button class="app-header__btn app-header__btn--secondary icon-settings" [routerLink]="['/dashboard']"></button>
+	<!-- Right Button Icon (Changes via HeaderStateService) -->
+	<button [routerLink]="['/dashboard']"
+					class="app-header__btn app-header__btn--secondary icon-settings">
+	</button>
 
 	<nav class="view-navigation" *ngIf="secondaryNavItems.length">
 		<a *ngFor="let item of secondaryNavItems">{{item}}</a>

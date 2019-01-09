@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderStateService } from "../__elements/app-header/header-state.service";
+
 import '@vaadin/vaadin-button';
 
 @Component({
@@ -8,9 +10,10 @@ import '@vaadin/vaadin-button';
 })
 export class MicroInteractionsDisableBtnDuringApiCallComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerService: HeaderStateService) { }
 
   ngOnInit() {
+    this.headerService.setButtonType("back");
   }
 
 }

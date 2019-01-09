@@ -16,21 +16,28 @@ I want a project to showcase a variety of technologies in Angular.
 - PWA
 - Google Authentication
 - Web Components
+- Font Icons (simple line icons)
 
 ## Coming Plans
 
-- Font Icons
 - API Services
 - Heroku Connection
 - Micro Interactions
 	- Disable Button On API Call
+	- Drag and Drop "Cards"
+	- Cross-State Notifications
 	- New List Item Entrance
+	- Scroll to Item
+	- Accordion
 	- Infinite Scroll?
 	- Error Messages
 - PWA: Offline Mode & Service Workers
 - PWA: Push Notifications
 - Vaadin Forms
 - Session Handling in Node
+- App & User Stats
+	- Last Log In
+	- Log in Frequency Block Chart
 - Finance App - Ultimate Insight on Spending
 	- CRUD
 		- Read
