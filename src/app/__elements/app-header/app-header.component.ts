@@ -10,14 +10,14 @@ export class AppHeaderComponent implements OnInit {
 
   @Input() secondaryNavItems: Array<string> = [];
   @Input() headerTitle: string;
-  @Input() goBack: boolean;
 
-  heroes: string;
+  buttonType: string;
 
   constructor( HeaderService: HeaderStateService ) {
-    HeaderService.getData().subscribe( heroes => {
-      console.log("subscribed: " + heroes);
-      this.heroes = heroes
+    this.buttonType = HeaderService.getData();
+    HeaderService.buttonTypeChange.subscribe( newVal => {
+      console.log("subscribed: " + newVal);
+      this.buttonType = newVal;
     } );
   }
 

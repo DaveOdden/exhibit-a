@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Subject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,14 +7,16 @@ import { Observable, of } from 'rxjs';
 export class HeaderStateService {
 
   buttonType: string = "menu"; // menu is the default
+  buttonTypeChange: Subject<string> = new Subject<string>();
 
   constructor() { }
 
-  getData(): Observable<string> {
-    return of(this.buttonType);
+  getData(): string {
+    return this.buttonType;
   }
 
   setButtonType( _type: string ): void {
     this.buttonType = _type;
+    this.buttonTypeChange.next(this.buttonType);
   }
 }

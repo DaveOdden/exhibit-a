@@ -2,22 +2,22 @@
 
 	<!-- Header -->
 	<div class="app-header__title">
-		<h1>{{headerTitle}}</h1>
+		<h1>{{buttonType}}</h1>
 	</div>
 
-	<!-- Navigation Button -->
+	<!-- LEFT Menu Button - (Changes via HeaderStateService) -->
 	<button [routerLink]="['/nav-menu']"
-					class="app-header__btn app-header__btn--primary icon-directions"
-					*ngIf="!goBack">
+					*ngIf="buttonType == 'menu'"
+					class="app-header__btn app-header__btn--primary icon-directions">
 	</button>
 
-	<!-- Back Button -->
-	<button [routerLink]="['/nav-menu']"
-					class="app-header__btn app-header__btn--primary icon-arrow-left"
-					*ngIf="goBack">
+	<!-- LEFT Back Button - (Changes via HeaderStateService) -->
+	<button [routerLink]="['/micro-interactions']"
+					*ngIf="buttonType == 'back'"
+					class="app-header__btn app-header__btn--primary icon-arrow-left">
 	</button>
-	
-	<!-- Right Button Icon (Changes via HeaderStateService) -->
+
+	<!-- RIGHT Button Icon - (Changes via HeaderStateService) -->
 	<button [routerLink]="['/dashboard']"
 					class="app-header__btn app-header__btn--secondary icon-settings">
 	</button>
