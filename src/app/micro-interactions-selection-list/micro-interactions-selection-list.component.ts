@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderStateService } from "../__elements/app-header/header-state.service";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-micro-interactions-selection-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MicroInteractionsSelectionListComponent implements OnInit {
 
-  constructor() { }
+  constructor( private headerService: HeaderStateService, private route: ActivatedRoute, private router: Router) {
+    console.log(route.snapshot);
+  }
 
   ngOnInit() {
+    this.headerService.setButtonType("menu");
   }
 
 }

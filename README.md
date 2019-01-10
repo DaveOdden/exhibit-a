@@ -12,6 +12,7 @@ I want a project to showcase a variety of technologies in Angular.
 	- Custom Components/Elements
 	- Router
 	- Route Transitions
+	- NgRx
 - Git
 - PWA
 - Google Authentication

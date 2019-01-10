@@ -2,7 +2,7 @@
 
 	<!-- Header -->
 	<div class="app-header__title">
-		<h1>{{buttonType}}</h1>
+		<h1>{{headerTitle}}</h1>
 	</div>
 
 	<!-- LEFT Menu Button - (Changes via HeaderStateService) -->
@@ -14,7 +14,7 @@
 	<!-- LEFT Back Button - (Changes via HeaderStateService) -->
 	<button [routerLink]="['/micro-interactions']"
 					*ngIf="buttonType == 'back'"
-					class="app-header__btn app-header__btn--primary icon-arrow-left">
+					class="app-header__btn app-header__btn--primary icon-arrow-left-circle">
 	</button>
 
 	<!-- RIGHT Button Icon - (Changes via HeaderStateService) -->

@@ -16,10 +16,23 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'micro-interactions',
     component: MicroInteractionsComponent,
-    data: { animation: 'login' },
+    data: {
+      animation: 'login'
+    },
     children: [
-      { path: '', component: MicroInteractionsSelectionListComponent },
-      { path: 'disable-btn-during-api-call', component: MicroInteractionsDisableBtnDuringApiCallComponent }
+      {
+        path: '',
+        component: MicroInteractionsSelectionListComponent,
+        data: {
+          leftNav: 'menu'
+        }
+      }, {
+        path: 'disable-btn-during-api-call',
+        component: MicroInteractionsDisableBtnDuringApiCallComponent,
+        data: { 
+          leftNav: 'back'
+        }
+      }
     ]
   },
   { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'status' }, }

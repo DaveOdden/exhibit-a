@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { HeaderStateService } from "../__elements/app-header/header-state.service";
 
 @Component({
   selector: 'app-micro-interactions',
@@ -8,9 +7,8 @@ import { HeaderStateService } from "../__elements/app-header/header-state.servic
 })
 export class MicroInteractionsComponent implements OnInit {
 
-  constructor(private headerService: HeaderStateService) { }
+  constructor() { }
 
   ngOnInit() {
-    //this.headerService.setButtonType("menu");
   }
 }
