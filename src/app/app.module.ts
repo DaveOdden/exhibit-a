@@ -8,6 +8,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './__state/reducers/state.reducer';
+
+
 // Third-Party
 import {
   SocialLoginModule,
@@ -30,6 +34,7 @@ import { MicroInteractionsSelectionListComponent } from './micro-interactions-se
 
 // Other
 import * as secrets from '../../credentials.json';
+import { ReadComponent } from './__state/read/read.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -53,11 +58,15 @@ export function getAuthServiceConfigs() {
     NavMenuComponent,
     MicroInteractionsComponent,
     MicroInteractionsDisableBtnDuringApiCallComponent,
-    MicroInteractionsSelectionListComponent
+    MicroInteractionsSelectionListComponent,
+    ReadComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({
+      tutorial: reducer
+    }),
     RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     SocialLoginModule,
