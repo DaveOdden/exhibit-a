@@ -35,6 +35,7 @@ import { MicroInteractionsSelectionListComponent } from './micro-interactions-se
 // Other
 import * as secrets from '../../credentials.json';
 import { ReadComponent } from './__state/read/read.component';
+import { WriteComponent } from './__state/write/write.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -60,6 +61,7 @@ export function getAuthServiceConfigs() {
     MicroInteractionsDisableBtnDuringApiCallComponent,
     MicroInteractionsSelectionListComponent,
     ReadComponent,
+    WriteComponent,
   ],
   imports: [
     BrowserModule,
