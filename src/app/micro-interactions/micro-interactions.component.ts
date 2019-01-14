@@ -1,4 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ngRxStore } from '../app.interfaces'
+import * as StateActions from '../__state/state.actions'
+import { AppState } from '../app.state';
 
 @Component({
   selector: 'app-micro-interactions',
@@ -7,7 +11,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MicroInteractionsComponent implements OnInit {
 
-  constructor() { }
+  constructor( private store: Store<AppState> ) {
+    this.store.dispatch(new StateActions.ChangeHeaderButtonType( "menu") )
+    this.store.dispatch(new StateActions.AddTutorial( { name: "Fart", url: "http://ggo.com" } ) )
+
+  }
 
   ngOnInit() {
   }

@@ -1,20 +1,32 @@
 import { Action } from '@ngrx/store'
-import { Tutorial } from '../../app.interfaces'
-import * as TutorialActions from '../state.actions'
+import { ngRxStore } from '../../app.interfaces'
+import * as StateActions from '../state.actions'
 
-// Section 1
-const initialState: Tutorial = {
-	name: 'Initial Tutorial',
-	url: 'http://google.com'
+const storeObj: ngRxStore = {
+	header: {
+		leftButtonType: "menu"
+	},
+	other: {
+		name: 'Initial Tutorial',
+		url: 'http://google.com'
+	}
 }
 
-// Section 2
-export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions) {
-
-	// Section 3
+export function reducer(state: ngRxStore[] = [storeObj], action: StateActions.Actions) {
 	switch(action.type) {
-		case TutorialActions.ADD_TUTORIAL:
+		case StateActions.ADD_TUTORIAL:
 			return [...state, action.payload];
+		case StateActions.CHANGE_HEADER:
+			//let index = state.map(d => d.header).indexOf( { leftButtonType: action.payload } );
+			state.map( (d) => {
+				d.header.leftButtonType = action.payload;
+			});
+			// return [
+			// 	...state.slice(0, index),
+			// 	Object.assign({}, state[index], action.payload),
+			// 	...state.slice(index + 1)
+			// ];
+			return [...state];
 		default:
 			return state;
 	}

@@ -16,7 +16,7 @@ export class AppHeaderComponent implements OnInit {
   constructor( HeaderService: HeaderStateService ) {
     this.buttonType = HeaderService.getData();
     HeaderService.buttonTypeChange.subscribe( newVal => {
-      console.log("subscribed: " + newVal);
+      //console.log("subscribed: " + newVal);
       this.buttonType = newVal;
     } );
   }

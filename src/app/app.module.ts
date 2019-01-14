@@ -67,7 +67,7 @@ export function getAuthServiceConfigs() {
     BrowserModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({
-      tutorial: reducer
+      appState: reducer
     }),
     RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

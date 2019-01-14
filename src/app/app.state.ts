@@ -1,5 +1,5 @@
-import { Tutorial } from './app.interfaces'
+import { ngRxStore } from './app.interfaces'
 
 export interface AppState {
-  readonly tutorial: Tutorial[];
+  readonly appState: ngRxStore[];
 }

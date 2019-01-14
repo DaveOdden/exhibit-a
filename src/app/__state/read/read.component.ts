@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { Tutorial } from '../../app.interfaces'
+import { ngRxStore } from '../../app.interfaces'
 import { AppState } from '../../app.state';
 
 @Component({
@@ -11,14 +11,12 @@ import { AppState } from '../../app.state';
 })
 export class ReadComponent implements OnInit {
 
-  // Section 1
-  tutorials: Observable<Tutorial[]>;
+  tutorials: Observable<ngRxStore[]>;
 
-  // Section 2
-  constructor(private store: Store<AppState>) { 
-    this.tutorials = store.select('tutorial');
+  constructor(private store: Store<AppState>) {
+    this.tutorials = store.select('appState');
+    console.log(this.tutorials );
   }
-
 
   ngOnInit() {
   }
