@@ -13,8 +13,6 @@ export class MicroInteractionsComponent implements OnInit {
 
   constructor( private store: Store<AppState> ) {
     this.store.dispatch(new StateActions.ChangeHeaderButtonType( "menu") )
-    this.store.dispatch(new StateActions.AddTutorial( { name: "Fart", url: "http://ggo.com" } ) )
-
   }
 
   ngOnInit() {

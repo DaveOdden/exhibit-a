@@ -1,6 +1,7 @@
 import { Action } from '@ngrx/store'
 import { ngRxStore } from '../../app.interfaces'
 import * as StateActions from '../state.actions'
+import * as _ from "lodash";
 
 const storeObj: ngRxStore = {
 	header: {
@@ -13,20 +14,14 @@ const storeObj: ngRxStore = {
 }
 
 export function reducer(state: ngRxStore[] = [storeObj], action: StateActions.Actions) {
+	console.log( action );
 	switch(action.type) {
 		case StateActions.ADD_TUTORIAL:
 			return [...state, action.payload];
 		case StateActions.CHANGE_HEADER:
-			//let index = state.map(d => d.header).indexOf( { leftButtonType: action.payload } );
-			state.map( (d) => {
-				d.header.leftButtonType = action.payload;
-			});
-			// return [
-			// 	...state.slice(0, index),
-			// 	Object.assign({}, state[index], action.payload),
-			// 	...state.slice(index + 1)
-			// ];
-			return [...state];
+			let newObj: ngRxStore[] = _.cloneDeep(state);
+			newObj[0].header.leftButtonType = action.payload;
+			return newObj;
 		default:
 			return state;
 	}

@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MicroInteractionsSelectionListComponent implements OnInit {
 
   constructor( private headerService: HeaderStateService, private route: ActivatedRoute, private router: Router) {
-    console.log(route.snapshot);
+
   }
 
   ngOnInit() {

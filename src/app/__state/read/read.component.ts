@@ -15,7 +15,6 @@ export class ReadComponent implements OnInit {
 
   constructor(private store: Store<AppState>) {
     this.tutorials = store.select('appState');
-    console.log(this.tutorials );
   }
 
   ngOnInit() {

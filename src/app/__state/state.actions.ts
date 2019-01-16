@@ -8,9 +8,7 @@ export const REMOVE_TUTORIAL    = '[TUTORIAL] Remove'
 
 export class ChangeHeaderButtonType implements Action {
     readonly type = CHANGE_HEADER
-    constructor(public payload: string) { 
-        console.log("in ChangeHeaderButtonType");
-    }
+    constructor(public payload: string) {}
 }
 
 export class AddTutorial implements Action {
