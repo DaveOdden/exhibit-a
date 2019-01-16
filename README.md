@@ -15,6 +15,7 @@ I want a project to showcase a variety of technologies in Angular.
 	- NgRx
 - Git
 - PWA
+- Lodash
 - Google Authentication
 - Web Components
 - Font Icons (simple line icons)
@@ -35,6 +36,7 @@ I want a project to showcase a variety of technologies in Angular.
 - PWA: Offline Mode & Service Workers
 - PWA: Push Notifications
 - Vaadin Forms
+- Track Users Progress Down Page (e.g. How much of a blog article was read)
 - Session Handling in Node
 - App & User Stats
 	- Last Log In
