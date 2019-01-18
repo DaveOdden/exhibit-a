@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
+import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-login';
+import { Store } from '@ngrx/store';
+import { ngRxStore, AppState } from '../app.interfaces'
+import * as StateActions from '../__state/state.actions'
 
 @Component({
   selector: 'app-login',
@@ -16,15 +19,19 @@ export class LoginComponent implements OnInit {
 	googleUserData = [];
 	user;
 
-  constructor( private socialAuthService: AuthService ) {
+  constructor( private store: Store<AppState>, private socialAuthService: AuthService ) {
 		this.socialAuthService.authState.subscribe((user) => {
       this.user = user;
 			this.userIsLoggedIn = (user != null);
 			this.googleUserData = user !== null ? this.createKeyVals(user) : [];
 			this.authIsLoading = user !== null ? false : true;
 			this.authIsRetrieved = user !== null ? false : true;
-    });
-  }
+			this.store.dispatch(new StateActions.setAuthState( user ) )
+
+		});
+	}
+	
+
 
   ngOnInit() {
 		this.viewIsLoading = false;
