@@ -28,9 +28,12 @@ I want a project to showcase a variety of technologies in Angular.
 - Have header reflect auth state (could even just be a different background color).
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
+- Route interceptor / activateRoute for page protection based on auth.
+- Route "resolves" for pre view load logic 
 
 ## Coming Plans
 
+- Configure SCSS
 - API Services
 - Heroku Connection
 - Micro Interactions

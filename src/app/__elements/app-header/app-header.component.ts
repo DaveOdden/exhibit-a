@@ -14,10 +14,12 @@ export class AppHeaderComponent implements OnInit {
   @Input() headerTitle: string;
 
   buttonType: string = 'menu';
+  isAuthenticated: boolean = false;
 
   constructor( private store: Store<AppState> ) {
     this.store.select('appState').subscribe(( state: ngRxStore[] ) => {
       this.buttonType = state[0].header.leftButtonType;
+      this.isAuthenticated = state[0].auth.id != "" ? true : false;
     });
   }
 
