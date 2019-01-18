@@ -1,7 +1,18 @@
 # Exhibit A
 
-I want a project to showcase a variety of technologies in Angular.
+I want a project to showcase a variety of technologies, techniques and interesting ideas.
 
+# Table of Contents
+
+1. [ Run this App ](#desc)
+2. [ Current Integration List ](#currentlist)
+3. [ Refinement ](#refinement)
+4. [ Coming Plans ](#comingplans)
+5. [ Performance Metrics ](#performance)
+6. [ Posterity ](#posterity)
+7. [ Captains Log ](#captainslog)
+
+<a name="runthisapp"></a>
 ## Run this App
 
 1. Clone repo to local directory.
@@ -12,6 +23,8 @@ I want a project to showcase a variety of technologies in Angular.
 5. run `npm run start` to compile the app and spin up the local server.
 6. Head to the local url in the browser
 
+<a name="currentlist"></a>
+
 ## Current Integration List
 
 - Angular 6
@@ -20,18 +33,20 @@ I want a project to showcase a variety of technologies in Angular.
 	- TypeScript
 	- NPM
   - Bower
-	- Karma
-	- Custom UI Components
-	- Router
-	- Route Transitions
-	- NgRx - State Management
-	- Angular Material - Prebuilt Components
+  - Karma
+  - Custom UI Components
+  - Router
+  - Route Transitions
+  - NgRx - State Management
+  - Angular Material - Prebuilt Components
 - HammerJS - Mobile Gesture Support
 - Git
 - Lodash
 - Google Authentication
 - Web Components
 - Font Icons (simple line icons)
+
+<a name="refinement"></a>
 
 ## Refinement
 
@@ -41,6 +56,8 @@ I want a project to showcase a variety of technologies in Angular.
 - So far, no unit tests have been written.
 - Route interceptor / activateRoute for page protection based on auth.
 - Route "resolves" for pre view load logic 
+
+<a name="comingplans"></a>
 
 ## Coming Plans
 
@@ -103,6 +120,7 @@ I want a project to showcase a variety of technologies in Angular.
 - Medication Consumption Tracker App
 
 
+<a name="performance"></a>
 
 # Performance Metrics
 
@@ -163,6 +181,8 @@ Regular WIFI (122.3 Mbps download speed)
 Slow 3G                          
 <img src="src/assets/readme/performance/2018-12-12-3g.png" alt="metric" width="500"/>
 
+<a name="posterity"></a>
+
 # Posterity
 
 - TODO: How to configure web components
@@ -186,6 +206,8 @@ If this app is forked or pulled down, it will not successfully build. I have a c
   }
 }
 ```
+
+<a name="captainslog"></a>
 
 # Captains Log
 
