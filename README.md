@@ -159,7 +159,7 @@ Slow 3G
 
 ## Credentials.json
 
-If this app is forked or pulled down, it will not successfully build. I have a credentials.json file in the root project folder containing Google Auth's secrets. This json structure was retrieved from the Google API console and follows this format:
+If this app is forked or pulled down, it will not successfully build. I have a credentials.json file in the root project folder containing Google Auth's secrets. The credentials.json is imported into the app.module.ts file and is required for this app to work. This json structure was retrieved from the Google API console and follows this format:
 
 ```
 { 
