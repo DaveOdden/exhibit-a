@@ -37,6 +37,14 @@ import * as secrets from '../../credentials.json';
 import * as _ from "lodash";
 import { ReadComponent } from './__state/read/read.component';
 import { WriteComponent } from './__state/write/write.component';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatCardModule
+} from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // Configs 
@@ -75,6 +83,12 @@ export function getAuthServiceConfigs() {
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     SocialLoginModule,
     AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
     DragDropModule
   ],
   providers: [{

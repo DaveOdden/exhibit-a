@@ -6,16 +6,17 @@ I want a project to showcase a variety of technologies in Angular.
 
 - Angular 6
 	- CLI
+	- PWA
 	- Typescript
 	- NPM
 	- Karma
 	- Custom Components/Elements
 	- Router
 	- Route Transitions
-	- NgRx
-- Angular Material
+	- NgRx - State Management
+- Angular Material - Prebuilt Components
+- HammerJS - Mobile Gesture Support
 - Git
-- PWA
 - Lodash
 - Google Authentication
 - Web Components
