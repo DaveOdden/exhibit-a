@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { ngRxStore } from '../../app.interfaces'
-import { AppState } from '../../app.state';
+import { ngRxStore, AppState } from '../../app.interfaces'
 
 @Component({
   selector: 'app-read',

@@ -1,3 +1,7 @@
+export interface AppState {
+  readonly appState: ngRxStore[];
+}
+
 export interface ngRxStore {
 	header: HeaderState;
 	other: nameUrl
