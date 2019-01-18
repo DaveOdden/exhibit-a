@@ -37,6 +37,7 @@ import * as secrets from '../../credentials.json';
 import * as _ from "lodash";
 import { ReadComponent } from './__state/read/read.component';
 import { WriteComponent } from './__state/write/write.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -74,6 +75,7 @@ export function getAuthServiceConfigs() {
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     SocialLoginModule,
     AppRoutingModule,
+    DragDropModule
   ],
   providers: [{
     provide: AuthServiceConfig,

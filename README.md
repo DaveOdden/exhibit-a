@@ -13,6 +13,7 @@ I want a project to showcase a variety of technologies in Angular.
 	- Router
 	- Route Transitions
 	- NgRx
+- Angular Material
 - Git
 - PWA
 - Lodash
