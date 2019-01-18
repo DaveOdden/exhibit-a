@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderStateService } from "../__elements/app-header/header-state.service";
 import { Store } from '@ngrx/store';
 import { ngRxStore } from '../app.interfaces'
 import * as StateActions from '../__state/state.actions'

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderStateService } from "../__elements/app-header/header-state.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { ngRxStore } from '../app.interfaces'

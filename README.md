@@ -7,10 +7,10 @@ I want a project to showcase a variety of technologies in Angular.
 - Angular 6
 	- CLI
 	- PWA
-	- Typescript
+	- TypeScript
 	- NPM
 	- Karma
-	- Custom Components/Elements
+	- Custom UI Components
 	- Router
 	- Route Transitions
 	- NgRx - State Management
@@ -24,9 +24,10 @@ I want a project to showcase a variety of technologies in Angular.
 
 ## Refinement
 
-- Store Google Auth data in NgRx Store to persist auth
-- Have header reflect auth state (could even just be a different background color)
+- Store Google Auth data in NgRx Store to persist auth.
+- Have header reflect auth state (could even just be a different background color).
 - Route transitions need to be worked on.
+- So far, no unit tests have been written.
 
 ## Coming Plans
 
