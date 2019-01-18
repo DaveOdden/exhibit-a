@@ -17,10 +17,17 @@
 					class="app-header__btn app-header__btn--primary icon-arrow-left-circle">
 	</button>
 
-	<!-- RIGHT Button Icon - (Changes via HeaderStateService) -->
+	<!-- RIGHT Button Icon - (Changes via HeaderStateService)
 	<button [routerLink]="['/dashboard']"
 					class="app-header__btn app-header__btn--secondary icon-settings">
 	</button>
+	-->
+
+	<button mat-button [matMenuTriggerFor]="menu" class="app-header__btn app-header__btn--secondary"><div class=" icon-options-vertical"></div></button>
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item>Settings</button>
+		<button mat-menu-item>Logout</button>
+	</mat-menu>
 
 	<nav class="view-navigation" *ngIf="secondaryNavItems.length">
 		<a *ngFor="let item of secondaryNavItems">{{item}}</a>

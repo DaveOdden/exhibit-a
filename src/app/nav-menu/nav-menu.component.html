@@ -1,7 +1,10 @@
 <div class="space-xl">
-  <vaadin-list-box selected="0">
-    <vaadin-item [routerLink]="['/dashboard']" aria-selected="true">Dashboard</vaadin-item>
+  <vaadin-list-box >
+    <vaadin-item [routerLink]="['/login']" >Login</vaadin-item>
+    <vaadin-item [routerLink]="['/dashboard']">Dashboard</vaadin-item>
     <vaadin-item [routerLink]="['/status']">App Status</vaadin-item>
     <vaadin-item [routerLink]="['/micro-interactions']">Micro Interactions</vaadin-item>
   </vaadin-list-box>
 </div>
+
+<!-- selected="0" on list-box for selected. aria-selected="true" for selected state -->

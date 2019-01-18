@@ -43,7 +43,8 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatMenuModule
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
@@ -88,8 +89,9 @@ export function getAuthServiceConfigs() {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatMenuModule,
     MatCardModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [{
     provide: AuthServiceConfig,

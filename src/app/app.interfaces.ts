@@ -7,11 +7,11 @@ export interface ngRxStore {
 	other: nameUrl
 }
 
-export interface HeaderState {
-	leftButtonType: string;
-}
+		export interface HeaderState {
+			leftButtonType: string;
+		}
 
-export interface nameUrl {
-	name: string;
-	url: string;
-}
+		export interface nameUrl {
+			name: string;
+			url: string;
+		}
