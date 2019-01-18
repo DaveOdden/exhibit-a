@@ -2,7 +2,7 @@
 
 I want a project to showcase a variety of technologies in Angular.
 
-## The List
+## Current Integration List
 
 - Angular 6
 	- CLI
@@ -14,13 +14,19 @@ I want a project to showcase a variety of technologies in Angular.
 	- Router
 	- Route Transitions
 	- NgRx - State Management
-- Angular Material - Prebuilt Components
+	- Angular Material - Prebuilt Components
 - HammerJS - Mobile Gesture Support
 - Git
 - Lodash
 - Google Authentication
 - Web Components
 - Font Icons (simple line icons)
+
+## Refinement
+
+- Store Google Auth data in NgRx Store to persist auth
+- Have header reflect auth state (could even just be a different background color)
+- Route transitions need to be worked on.
 
 ## Coming Plans
 
@@ -142,8 +148,9 @@ Regular WIFI (122.3 Mbps download speed)
 Slow 3G                          
 <img src="src/assets/readme/performance/2018-12-12-3g.png" alt="metric" width="500"/>
 
-# Notes
+# Captains Log
 
+- 1/18/19: A security vulnerability was detected by Github. the origins of this appear to be angular devkit. Look into upgrading devkit to resolve this vulnerability.
 - Needed to update the base url in index.html in order for prod build to work (apache and http-server).
 - Revision 393987 - To Read a JSON file in TS, a type declaration is needed for a successful import.
   - https://hackernoon.com/import-json-into-typescript-8d465beded79
