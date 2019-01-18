@@ -17,7 +17,7 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-} from "angular-6-social-login";
+} from 'angular-6-social-login';
 
 // Components
 import { AppComponent } from './app.component';
@@ -29,12 +29,14 @@ import { DateTraversalComponent } from './__elements/date-traversal/date-travers
 import { LoginComponent } from './login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
-import { MicroInteractionsDisableBtnDuringApiCallComponent } from './micro-interactions-disable-btn-during-api-call/micro-interactions-disable-btn-during-api-call.component';
+import {
+  MicroInteractionsDisableBtnDuringApiCallComponent
+} from './micro-interactions-disable-btn-during-api-call/micro-interactions-disable-btn-during-api-call.component';
 import { MicroInteractionsSelectionListComponent } from './micro-interactions-selection-list/micro-interactions-selection-list.component';
 
 // Other
 import * as secrets from '../../credentials.json';
-import * as _ from "lodash";
+import * as _ from 'lodash';
 import { ReadComponent } from './__state/read/read.component';
 import { WriteComponent } from './__state/write/write.component';
 import {
@@ -48,9 +50,9 @@ import {
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
-// Configs 
+// Configs
 export function getAuthServiceConfigs() {
-  let config = new AuthServiceConfig(
+  const config = new AuthServiceConfig(
     [ {
       id: GoogleLoginProvider.PROVIDER_ID,
       provider: new GoogleLoginProvider(secrets.default.web.client_id)
@@ -101,7 +103,7 @@ export function getAuthServiceConfigs() {
   bootstrap: [AppComponent]
 })
 
-export class AppModule { 
+export class AppModule {
   constructor() {
   }
 }

@@ -152,6 +152,30 @@ Regular WIFI (122.3 Mbps download speed)
 Slow 3G                          
 <img src="src/assets/readme/performance/2018-12-12-3g.png" alt="metric" width="500"/>
 
+# Posterity
+
+- TODO: How to configure web components
+- TODO: Google Auth Outline
+
+## Credentials.json
+
+If this app is forked or pulled down, it will not successfully build. I have a credentials.json file in the root project folder containing Google Auth's secrets. This json structure was retrieved from the Google API console and follows this format:
+
+```
+{ 
+  "web": {
+    "client_id":"GOOGLE_API_CLIENT_ID",
+    "project_id":"GOOGLE_API_PROJECT_ID",
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"GOOGLE_API_SECRET",
+    "redirect_uris":["http://localhost:4200"],
+    "javascript_origins":["http://localhost:4200"]
+  }
+}
+```
+
 # Captains Log
 
 - 1/18/19: A security vulnerability was detected by Github. the origins of this appear to be angular devkit. Look into upgrading devkit to resolve this vulnerability.
