@@ -2,6 +2,16 @@
 
 I want a project to showcase a variety of technologies in Angular.
 
+## Run this App
+
+1. Clone repo to local directory.
+2. Make sure npm and bower are installed globally. (`npm -v` and `bower -v`).
+    - Not Installed? Install NPM and Bower globally with `npm i -g` and `bower i -g`.
+3. Execute `npm i; bower i` within the command line whilst in the project directory.
+4. Create and supply JSON for Google Auth secrets in credentials.json (see below)
+5. run `npm run start` to compile the app and spin up the local server.
+6. Head to the local url in the browser
+
 ## Current Integration List
 
 - Angular 6
@@ -9,6 +19,7 @@ I want a project to showcase a variety of technologies in Angular.
 	- PWA
 	- TypeScript
 	- NPM
+  - Bower
 	- Karma
 	- Custom UI Components
 	- Router
