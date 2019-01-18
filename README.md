@@ -29,6 +29,9 @@ I want a project to showcase a variety of technologies in Angular.
 - Micro Interactions
 	- Disable Button On API Call
 	- Drag and Drop "Cards"
+		- Store Content in DB
+		- Store Coordinates in DB
+		- Store Size of Card in DB
 	- Cross-State Notifications
 	- New List Item Entrance
 	- Scroll to Item

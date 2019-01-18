@@ -14,12 +14,11 @@ import '@vaadin/vaadin-button';
 })
 export class MicroInteractionsDisableBtnDuringApiCallComponent implements OnInit {
 
-  constructor(private headerService: HeaderStateService, private store: Store<AppState> ) {
+  constructor( private store: Store<AppState> ) {
     this.store.dispatch(new StateActions.ChangeHeaderButtonType( "back") )
   }
 
   ngOnInit() {
-    this.headerService.setButtonType("back");
   }
 
 }
