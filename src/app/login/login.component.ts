@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-login';
 import { Store } from '@ngrx/store';
-import { ngRxStore, AppState } from '../app.interfaces'
+import { NgRxStore, AppState } from '../app.interfaces'
 import * as StateActions from '../__state/state.actions'
 
 @Component({

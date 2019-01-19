@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { ngRxStore, AppState } from '../app.interfaces'
-import * as StateActions from '../__state/state.actions'
+import { NgRxStore, AppState } from '../app.interfaces';
+import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-micro-interactions-selection-list',
@@ -10,9 +10,9 @@ import * as StateActions from '../__state/state.actions'
   styleUrls: ['./micro-interactions-selection-list.component.css']
 })
 export class MicroInteractionsSelectionListComponent implements OnInit {
-  
+
   constructor( private store: Store<AppState> ) {
-    this.store.dispatch(new StateActions.ChangeHeaderButtonType( "menu") )
+    this.store.dispatch(new StateActions.ChangeHeaderButtonType( 'menu') );
   }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Action } from '@ngrx/store'
-import { ngRxStore, nameUrl } from '../app.interfaces'
+import { NgRxStore, NameUrl } from '../app.interfaces'
 import { SocialUser } from 'angular-6-social-login';
 
 export const SET_AUTH           = '[AUTH] Set'
@@ -24,7 +24,7 @@ export class ChangeHeaderButtonType implements Action {
 
 export class AddTutorial implements Action {
     readonly type = ADD_TUTORIAL
-    constructor(public payload: nameUrl) {}
+    constructor(public payload: NameUrl) {}
 }
 
 export class RemoveTutorial implements Action {

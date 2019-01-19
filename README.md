@@ -211,7 +211,11 @@ If this app is forked or pulled down, it will not successfully build. I have a c
 
 # Captains Log
 
+- 1/19/19: `(<any>this.actions).ofType( ... )` needed to avoid typing error.
+- 1/19/19: When using `ng generate service [service-name]` you must define the module like so: `ng generate service services/auth --module=app`.
 - 1/18/19: A security vulnerability was detected by Github. the origins of this appear to be angular devkit. Look into upgrading devkit to resolve this vulnerability.
 - Needed to update the base url in index.html in order for prod build to work (apache and http-server).
 - Revision 393987 - To Read a JSON file in TS, a type declaration is needed for a successful import.
   - https://hackernoon.com/import-json-into-typescript-8d465beded79
+
+-https://mherman.org/blog/authentication-in-angular-with-ngrx/

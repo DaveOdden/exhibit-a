@@ -1,31 +1,34 @@
 import { SocialUser } from 'angular-6-social-login';
 
+import * as auth from './__state/reducers/auth.reducer';
 
 export interface AppState {
-  readonly appState: ngRxStore[];
+  authState: auth.State;
 }
 
-export interface ngRxStore {
-	auth: SocialUser;
-	header: HeaderState;
-	other: nameUrl
+export const reducers = {
+  auth: auth.reducer
+};
+
+export interface AppState {
+  authState: auth.State;
 }
 
-	// export interface SocialUser {
-	// 	id: number;
-	// 	name: string;
-	// 	email: string;
-	// 	image: string;
-	// 	token: string;
-	// 	idToken: string;
-	// 	provider: string;
-	// }
+export interface AppState {
+  readonly appState: NgRxStore[];
+}
 
-		export interface HeaderState {
-			leftButtonType: string;
-		}
+export interface NgRxStore {
+  auth: SocialUser;
+  header: HeaderState;
+  other: NameUrl;
+}
 
-		export interface nameUrl {
-			name: string;
-			url: string;
-		}
+export interface HeaderState {
+  leftButtonType: string;
+}
+
+export interface NameUrl {
+  name: string;
+  url: string;
+}

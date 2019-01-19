@@ -7,6 +7,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './__state/reducers/state.reducer';
@@ -26,7 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatusComponent } from './status/status.component';
 import { AppHeaderComponent } from './__elements/app-header/app-header.component';
 import { DateTraversalComponent } from './__elements/date-traversal/date-traversal.component';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
 import {
@@ -49,6 +50,13 @@ import {
   MatMenuModule
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LandingComponent } from './components/landing/landing.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+
+import { EffectsModule } from '@ngrx/effects';
+import { AuthService } from './services/auth.service';
+import { AuthEffects } from './__state/effects/auth.effects';
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -68,15 +76,18 @@ export function getAuthServiceConfigs() {
     StatusComponent,
     AppHeaderComponent,
     DateTraversalComponent,
-    LoginComponent,
     NavMenuComponent,
     MicroInteractionsComponent,
     MicroInteractionsDisableBtnDuringApiCallComponent,
     MicroInteractionsSelectionListComponent,
     ReadComponent,
     WriteComponent,
+    LoginComponent,
+    SignUpComponent,
+    LandingComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({
@@ -94,8 +105,9 @@ export function getAuthServiceConfigs() {
     MatMenuModule,
     MatCardModule,
     DragDropModule,
+    EffectsModule.forRoot([AuthEffects]),
   ],
-  providers: [{
+  providers: [ AuthService, {
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs
   }],
