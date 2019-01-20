@@ -9,10 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-<<<<<<< HEAD
-    expect(page.getParagraphText()).toEqual('Welcome to tech-showcase!');
-=======
     expect(page.getParagraphText()).toEqual('Welcome to exhibit-a!');
->>>>>>> develop
   });
 });

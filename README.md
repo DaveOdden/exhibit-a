@@ -1,31 +1,5 @@
 # Exhibit A
 
-<<<<<<< HEAD
-I want a project to showcase a variety of front-end web technologies.
-
-## The List
-
-- Angular 6
-  - Typescript
-  - NPM
-- PWA
-
-
-# Performance Marks
-
-**12-12-18**
-Boilerplate Angular CLI application with angular-pwa
-
-Regular WIFI (122.3 Mbps download speed)
-![alt text](/readme_assets/performance/2018-12-12-wifi.png)
-
-Slow 3G
-![alt text](/readme_assets/performance/2018-12-12-3g.png)
-
-# Notes
-
-- Needed to update the base url in index.html in order for prod build to work (apache and http-server)
-=======
 I want a project to showcase a variety of technologies, techniques and interesting ideas.
 
 # Table of Contents
@@ -245,4 +219,3 @@ If this app is forked or pulled down, it will not successfully build. I have a c
   - https://hackernoon.com/import-json-into-typescript-8d465beded79
 
 -https://mherman.org/blog/authentication-in-angular-with-ngrx/
->>>>>>> develop

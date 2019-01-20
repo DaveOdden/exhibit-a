@@ -3,11 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
-    "tech-showcase": {
-=======
     "exhibit-a": {
->>>>>>> develop
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,11 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
-            "outputPath": "dist/tech-showcase",
-=======
             "outputPath": "dist/exhibit-a",
->>>>>>> develop
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,11 +21,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-<<<<<<< HEAD
-              "src/manifest.json"
-            ],
-            "styles": [
-=======
               "src/manifest.json",
               {
                 "glob": "**/*.js",
@@ -43,7 +30,6 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
->>>>>>> develop
               "src/styles.css"
             ],
             "scripts": []
@@ -72,30 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "tech-showcase:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "tech-showcase:build:production"
-=======
             "browserTarget": "exhibit-a:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "exhibit-a:build:production"
->>>>>>> develop
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "tech-showcase:build"
-=======
             "browserTarget": "exhibit-a:build"
->>>>>>> develop
           }
         },
         "test": {
@@ -130,11 +104,7 @@
         }
       }
     },
-<<<<<<< HEAD
-    "tech-showcase-e2e": {
-=======
     "exhibit-a-e2e": {
->>>>>>> develop
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -142,19 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-<<<<<<< HEAD
-            "devServerTarget": "tech-showcase:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "tech-showcase:serve:production"
-=======
             "devServerTarget": "exhibit-a:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "exhibit-a:serve:production"
->>>>>>> develop
             }
           }
         },
@@ -170,9 +132,5 @@
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "tech-showcase"
-=======
   "defaultProject": "exhibit-a"
->>>>>>> develop
 }
