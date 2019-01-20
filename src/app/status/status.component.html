@@ -1,0 +1,9 @@
+<app-app-header headerTitle="App Status" [secondaryNavItems]="['day','week','month','year']"></app-app-header>
+
+<div *ngIf="userIsLoggedIn">
+	User is logged in
+</div>
+
+<hr>
+
+<app-read></app-read>

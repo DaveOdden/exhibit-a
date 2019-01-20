@@ -2,13 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TechShowcase</title>
+
+  <title>Exhibit-A</title>
   <base href="./">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
+
+  <!-- Lumo styles -->
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/badge.html">
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/color.html">
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/sizing.html">
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/spacing.html">
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/style.html">
+  <link rel="import" href="assets/bower_components/vaadin-lumo-styles/typography.html">
+
+  <custom-style>
+    <style include="lumo-color lumo-typography lumo-badge lumo-sizing lumo-spacing">
+      html {
+        --lumo-font-family: "Open Sans", sans-serif;
+      }
+    </style>
+  </custom-style>
+
+  <!-- This is needed when targeting ES5. It will add the adapter to browsers that support customElements, which require ES6 classes  -->
+  <!-- <div id="ce-es5-shim">
+    <script type="text/javascript">
+      if (!window.customElements) {
+          var ceShimContainer = document.querySelector('#ce-es5-shim');
+          ceShimContainer.parentElement.removeChild(ceShimContainer);
+      }
+    </script>
+    <script type="text/javascript" src="assets/webcomponent/custom-elements-es5-adapter.js"></script>
+  </div> -->
+
+  <script src="assets/hacky-bits/prevent-duplicate-web-components.js"></script>
+  <script src="assets/web-component/webcomponents-loader.js"></script>
+
 </head>
 <body>
   <app-root></app-root>

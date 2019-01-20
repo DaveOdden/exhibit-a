@@ -1,0 +1,71 @@
+<app-app-header></app-app-header>
+
+<div class="row">
+    <div class="col-md-4">
+      <h1>Log in</h1>
+      <hr><br>
+      <form (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            [(ngModel)]="user.email"
+            name="email"
+            type="email"
+            required
+            class="form-control"
+            id="email"
+            placeholder="enter your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            required
+            class="form-control"
+            id="password"
+            placeholder="enter a password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a [routerLink]="['/']" class="btn btn-success">Cancel</a>
+      </form>
+      <p>
+        <span>Don't have an account?&nbsp;</span>
+        <a [routerLink]="['/sign-up']">Sign up!</a>
+      </p>
+    </div>
+  </div>
+
+<!-- Sign In Module -->
+<div *ngIf="!viewIsLoading && !userIsLoggedIn">
+  <h1>Sign In</h1>
+  <vaadin-button theme="primary" (click)="googleSignIn()">Sign in with Google</vaadin-button>
+</div>
+
+<!-- Authenticated Content -->
+<div *ngIf="!viewIsLoading && userIsLoggedIn">
+  <vaadin-button theme="primary" (click)="googleSignOut()">Sign Out</vaadin-button>
+  <h3>Authentication Details</h3>
+  <ul class="side-by-side-list">
+    <li *ngFor="let item of googleUserData">
+      <div class="data-key">{{ item.key }}</div>
+      <div class="data-value">{{ item.val }}</div>
+    </li>
+  </ul>
+</div>
+
+<div class="card mt-5" style="margin:auto;width: 600px;">
+  <div class="card-body">
+    <h5 class="card-title">Login</h5>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" placeholder="Email Address">
+    </div>
+    <div class="form-group">
+      <label for="email">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </div>
+</div>

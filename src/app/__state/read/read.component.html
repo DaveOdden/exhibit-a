@@ -1,0 +1,11 @@
+<div class="right" *ngIf="tutorials">
+
+  <h3>NgRx Store</h3>
+
+  <ul>
+    <li *ngFor="let tutorial of tutorials | async">
+      <div >{{ tutorial | json }}</div>
+    </li>
+  </ul>
+
+</div>

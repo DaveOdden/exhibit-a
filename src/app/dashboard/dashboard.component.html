@@ -1,0 +1,43 @@
+<div *ngIf="viewIsLoading">Loading...</div>
+
+<app-app-header headerTitle="Dashboard"></app-app-header>
+
+<!-- Statuses -->
+<div>
+
+  <mat-card cdkDrag style="width: 50%">Pay Bills</mat-card>
+  <ul class="side-by-side-list">
+
+    <!-- Loading Status -->
+    <li>
+      <div class="data-key">viewIsLoading</div>
+      <div class="data-value">{{ viewIsLoading }}</div>
+    </li>
+
+    <!-- Loading Status -->
+    <li>
+      <div class="data-key">authIsLoading</div>
+      <div class="data-value">{{ authIsLoading }}</div>
+    </li>
+
+    <!-- Logged In Status -->
+    <li>
+      <div class="data-key">userIsLoggedIn</div>
+      <div class="data-value">{{ userIsLoggedIn }}</div>
+    </li>
+
+    <!-- User Data Present -->
+    <li>
+      <div class="data-key">User Data Present</div>
+      <div class="data-value">
+        <span *ngIf="user">
+            {{ user.id.length > 0 }}
+        </span>
+        <span *ngIf="!user">
+            false
+        </span>
+      </div>
+    </li>
+    
+  </ul>
+</div>

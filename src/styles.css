@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "assets/bower_components/simple-line-icons/css/simple-line-icons.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+	margin: 0;
+	font-family: var(--lumo-font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.side-by-side-list {
+	padding: 0 2rem;
+}
+
+	.side-by-side-list > li {
+		display: flex;
+		margin: 0;
+		padding: 1rem 0;
+		border-bottom: 1px solid #eee;
+	}
+
+		.side-by-side-list .data-key {
+			text-align: right;
+			min-width: 100px;
+			font-weight: 600;
+			color: #000;
+		}
+
+		.side-by-side-list .data-value {
+			flex-grow: 2;
+			margin-left: 1rem;
+			max-width: 90%;
+			overflow-x: scroll;
+			color: #666;
+		}
+
+
+
+
+
+
+
+
+		.space-xs {
+      padding: var(--lumo-space-xs);
+    }
+
+    .space-s {
+      padding: var(--lumo-space-s);
+    }
+
+    .space-m {
+      padding: var(--lumo-space-m);
+    }
+
+    .space-l {
+      padding: var(--lumo-space-l);
+    }
+
+    .space-xl {
+      padding: var(--lumo-space-xl);
+    }
