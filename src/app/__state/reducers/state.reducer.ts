@@ -21,21 +21,21 @@ const storeObj: NgRxStore = {
 		name: 'Initial Tutorial',
 		url: 'http://google.com'
 	}
-}
+};
 
 export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Actions) {
-	console.log( action );
-	switch(action.type) {
+	switch (action.type) {
 		case StateActions.SET_AUTH:
-			if(action.payload != null) {
-				let returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
+			if (action.payload != null) {
+				const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
 				returnSetAuthState[0].auth = action.payload;
 				return returnSetAuthState;
 			}
+			break;
 		case StateActions.ADD_TUTORIAL:
 			return [...state, action.payload];
 		case StateActions.CHANGE_HEADER:
-			let newObj: NgRxStore[] = _.cloneDeep(state);
+			const  newObj: NgRxStore[] = _.cloneDeep(state);
 			newObj[0].header.leftButtonType = action.payload;
 			return newObj;
 		default:

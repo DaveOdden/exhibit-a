@@ -2,19 +2,11 @@ import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
-// import { map } from 'rxjs';
-// import { switchMap } from 'rxjs';
-// import { catch } from 'rxjs';
-
-import { tap } from 'rxjs/operators';
-
+import { Observable, of } from 'rxjs';
+import { tap, map, switchMap } from 'rxjs/operators';
 import { AuthService } from '../../services/auth.service';
-import {
-  AuthActionTypes,
-  LogIn, LogInSuccess, LogInFailure,
-} from '../auth.actions';
+import { AuthActionTypes, LogIn, LogInSuccess, LogInFailure } from '../auth.actions';
+import { User } from '../../models/user';
 
 @Injectable()
 export class AuthEffects {
@@ -26,20 +18,14 @@ export class AuthEffects {
   ) {}
 
   @Effect()
-  LogIn: Observable<any> = (<any>this.actions)
-  .ofType(AuthActionTypes.LOGIN)
-    .map((action: LogIn) => action.payload)
-    .switchMap(payload => {
-      return (<any>this.authService.logIn(payload.email, payload.password))
-        .map((user) => {
+  LogIn: Observable<any> = this.actions.pipe( ofType( AuthActionTypes.LOGIN ),
+    map( (action: LogIn) => action.payload ), switchMap(payload => {
+      return this.authService.logIn(payload.email, payload.password).pipe( map( (user) => {
           console.log(user);
           return new LogInSuccess({token: user.token, email: payload.email});
-        })
-        .catch((error) => {
-          console.log(error);
-          return of(new LogInFailure({ error: error }));
-        });
-  } );
+        } )
+      );
+  } ) );
 
   @Effect({ dispatch: false })
   LogInSuccess: Observable<any> = this.actions.pipe(

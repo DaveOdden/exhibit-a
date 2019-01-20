@@ -1,4 +1,3 @@
-
 // Boilerplate
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,10 +7,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './__state/reducers/state.reducer';
-
+import { HttpClientModule } from '@angular/common/http';
 
 // Third-Party
 import {
@@ -27,7 +25,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatusComponent } from './status/status.component';
 import { AppHeaderComponent } from './__elements/app-header/app-header.component';
 import { DateTraversalComponent } from './__elements/date-traversal/date-traversal.component';
-//import { LoginComponent } from './login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
 import {
@@ -90,6 +87,7 @@ export function getAuthServiceConfigs() {
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     StoreModule.forRoot({
       appState: reducer
     }),

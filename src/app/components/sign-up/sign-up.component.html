@@ -1,9 +1,7 @@
-<app-app-header></app-app-header>
+<app-app-header headerTitle="Sign Up" [goBack]="true"></app-app-header>
 
-<div class="row">
+<div class="row p-5">
   <div class="col-md-4">
-    <h1>Sign up</h1>
-    <hr><br>
     <form (ngSubmit)="onSubmit()" ngNativeValidate>
       <div class="form-group">
         <label for="email">Email</label>
@@ -27,8 +25,8 @@
           id="password"
           placeholder="enter a password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <a [routerLink]="['/']" class="btn btn-success">Cancel</a>
+      <button type="submit" class="btn btn-primary m-1">Submit</button>
+      <a [routerLink]="['/']" class="btn btn-success m-1">Cancel</a>
     </form>
     <p>
       <span>Already have an account?&nbsp;</span>
