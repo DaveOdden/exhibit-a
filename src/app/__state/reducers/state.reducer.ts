@@ -15,7 +15,8 @@ const storeObj: NgRxStore = {
 		provider: 'google'
 	},
 	header: {
-		leftButtonType: 'menu'
+		leftButtonType: 'menu',
+		title: 'Exhibit-A'
 	},
 	other: {
 		name: 'Initial Tutorial',
@@ -34,10 +35,16 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Ac
 			break;
 		case StateActions.ADD_TUTORIAL:
 			return [...state, action.payload];
-		case StateActions.CHANGE_HEADER:
+		case StateActions.CHANGE_HEADER_BUTTON_TYPE:
 			const  newObj: NgRxStore[] = _.cloneDeep(state);
 			newObj[0].header.leftButtonType = action.payload;
 			return newObj;
+		case StateActions.CHANGE_HEADER_TITLE:
+			const  newObjectAA: NgRxStore[] = _.cloneDeep(state);
+			console.log('funnel through reducer');
+			console.log(newObjectAA);
+			newObjectAA[0].header.title = action.payload;
+			return newObjectAA;
 		default:
 			return state;
 	}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { NgRxStore, AppState } from '../app.interfaces';
+import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class DashboardComponent implements OnInit {
 
-	constructor() {
-
+	constructor( private store: Store<AppState> ) {
+		console.log('initiate HEADER CHANGE');
+    this.store.dispatch(new StateActions.ChangeHeaderTitle('Dashvoard') );
 	}
 
 	ngOnInit() {

@@ -12,7 +12,7 @@ import * as StateActions from '../__state/state.actions';
 export class MicroInteractionsSelectionListComponent implements OnInit {
 
   constructor( private store: Store<AppState> ) {
-    this.store.dispatch(new StateActions.ChangeHeaderButtonType( 'menu') );
+    this.store.dispatch(new StateActions.ChangeHeaderTitle('Test') );
   }
 
   ngOnInit() {
