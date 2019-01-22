@@ -54,6 +54,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthService } from './services/auth.service';
 import { AuthEffects } from './__state/effects/auth.effects';
+import { MoneyComponent } from './money/money.component';
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -81,7 +82,8 @@ export function getAuthServiceConfigs() {
     WriteComponent,
     LoginComponent,
     SignUpComponent,
-    LandingComponent
+    LandingComponent,
+    MoneyComponent
   ],
   imports: [
     FormsModule,

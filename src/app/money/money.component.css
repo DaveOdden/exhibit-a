@@ -1,0 +1,42 @@
+.payment-list-item, .credit-card-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ccc;
+  background-position: center top;
+  border-radius: 10rem;
+  margin: 0 1rem 0 0;
+}
+
+.credit-card-icon {
+  height: 32px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ccc;
+  background-position: center top;
+  margin: 0 1rem 0 0;
+  border-radius: .15rem;
+}
+
+  .credit-card-icon.citi { background-image: url("../../assets/images/credit-card-citi.png") }
+  .credit-card-icon.usaa { background-image: url("../../assets/images/credit-card-usaa.png") }
+  .credit-card-icon.capital-one { background-image: url("../../assets/images/credit-card-capital-one-png.png") }
+  .credit-card-icon.banana-republic { background-image: url("../../assets/images/credit-card-banana-republic.png") }
+  .credit-card-icon.home-depot { background-image: url("../../assets/images/credit-card-home-depot.png") }
+
+.payment-icon.netflix {
+  background-image: url("../../assets/images/2000px-Netflix_icon.svg.png");
+}
+
+.list-name {
+  font-size: 1rem;
+  margin: 0 0 .25rem 0;
+  color: #444;
+}

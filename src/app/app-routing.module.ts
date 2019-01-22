@@ -3,6 +3,7 @@ import { CanActivate, RouterModule, Routes } from '@angular/router';
 import { AuthAccess } from './app.auth.module'
 //import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MoneyComponent } from './money/money.component';
 import { StatusComponent } from './status/status.component';
 import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, data: { animation: 'login' } },
   { path: 'status', component: StatusComponent, data: { animation: 'login' } },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'money', component: MoneyComponent },
   { path: 'micro-interactions',
     component: MicroInteractionsComponent,
     data: {
