@@ -1,7 +1,10 @@
-<app-app-header headerTitle="Login" [goBack]="true"></app-app-header>
-
 <div class="row p-5">
     <div class="col-md-4">
+      <div *ngIf="errorMessage">
+        <div class="alert alert-danger" role="alert">
+          {{errorMessage}}
+        </div>
+      </div>
       <form (ngSubmit)="onSubmit()" ngNativeValidate>
         <div class="form-group">
           <label for="email">Email</label>

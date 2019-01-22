@@ -1,4 +1,5 @@
 
-<div [@routerTransition]="prepareRoute(outlet)" >
+<div [@routerTransition]="prepareRoute(outlet)">
+  <app-app-header headerTitle="Dashboard"></app-app-header>
   <router-outlet #outlet="outlet"></router-outlet>
 </div>
