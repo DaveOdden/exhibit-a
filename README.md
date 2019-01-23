@@ -30,6 +30,7 @@ I want a project to showcase a variety of technologies, techniques and interesti
 - Angular 6
 	- CLI
 	- PWA
+	- SCSS
 	- TypeScript
 	- NPM
   - Bower
@@ -51,7 +52,6 @@ I want a project to showcase a variety of technologies, techniques and interesti
 ## Refinement
 
 - Store Google Auth data in NgRx Store to persist auth.
-- Have header reflect auth state (could even just be a different background color).
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
 - Route interceptor / activateRoute for page protection based on auth.
@@ -61,7 +61,6 @@ I want a project to showcase a variety of technologies, techniques and interesti
 
 ## Coming Plans
 
-- Configure SCSS
 - API Services
 - Heroku Connection
 - Micro Interactions
