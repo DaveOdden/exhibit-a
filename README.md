@@ -38,14 +38,14 @@ I want a project to showcase a variety of technologies, techniques and interesti
   - Custom UI Components
   - Router
   - Route Transitions
-  - NgRx - State Management
-  - Angular Material - Prebuilt Components
+- NgRx - State Management
+- Angular Material - Prebuilt Components & Styles
 - HammerJS - Mobile Gesture Support
 - Git
 - Lodash
 - Google Authentication
-- Web Components
-- Font Icons (simple line icons)
+- Web Components (Vaadin)
+- Font Icons (Simple Line Icons)
 
 <a name="refinement"></a>
 
