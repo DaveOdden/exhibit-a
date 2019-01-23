@@ -6,7 +6,7 @@ import { NgRxStore, AppState } from '../../app.interfaces';
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
-  styleUrls: ['./read.component.css']
+  styleUrls: ['./read.component.scss']
 })
 export class ReadComponent implements OnInit {
 

@@ -6,7 +6,7 @@ import * as StateActions from '../../__state/state.actions'
 @Component({
   selector: 'app-app-header',
   templateUrl: './app-header.component.html',
-  styleUrls: ['./app-header.component.css']
+  styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
 

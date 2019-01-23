@@ -21,7 +21,7 @@ export class ChangeHeaderButtonType implements Action {
 
 export class ChangeHeaderTitle implements Action {
     readonly type = CHANGE_HEADER_TITLE;
-    constructor(public payload: string) { console.log('passing through action') }
+    constructor(public payload: string) {}
 }
 
 export class AddTutorial implements Action {

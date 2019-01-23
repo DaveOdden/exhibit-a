@@ -9,13 +9,13 @@ import { State } from 'src/app/__state/reducers/auth.reducer';
 @Component( {
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 } )
 export class LoginComponent implements OnInit {
 
   user: User = new User();
   getState: Observable<any>;
-  errorMessage: string | null = "fart";
+  errorMessage: string | null;
 
   constructor( private store: Store<State> ) {
     this.getState = this.store.select(selectAuthState);

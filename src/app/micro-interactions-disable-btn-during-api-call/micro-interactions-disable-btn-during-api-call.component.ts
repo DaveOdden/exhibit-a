@@ -8,7 +8,7 @@ import '@vaadin/vaadin-button';
 @Component({
   selector: 'app-micro-interactions-disable-btn-during-api-call',
   templateUrl: './micro-interactions-disable-btn-during-api-call.component.html',
-  styleUrls: ['./micro-interactions-disable-btn-during-api-call.component.css']
+  styleUrls: ['./micro-interactions-disable-btn-during-api-call.component.scss']
 })
 export class MicroInteractionsDisableBtnDuringApiCallComponent implements OnInit {
 

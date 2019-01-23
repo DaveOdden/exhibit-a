@@ -11,7 +11,7 @@ import '@vaadin/vaadin-list-box/vaadin-list-box.js';
   selector: 'app-root',
   animations: [ routerTransition ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
