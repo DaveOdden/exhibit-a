@@ -13,6 +13,7 @@ I want a project to showcase a variety of technologies, techniques and interesti
 7. [ Captains Log ](#captainslog)
 
 <a name="runthisapp"></a>
+
 ## Run this App
 
 1. Clone repo to local directory.
@@ -53,7 +54,7 @@ Note: if you wish to test on your mobile device locally, you need to run `ng ser
 
 ## Refinement
 
-- Store Google Auth data in NgRx Store to persist auth.
+- Store Google Auth data in NgRx Store AND a cookie to persist auth
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
 - Route interceptor / activateRoute for page protection based on auth.

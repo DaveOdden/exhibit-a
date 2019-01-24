@@ -49,7 +49,7 @@ import {
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './login/login.component';
 
 import { EffectsModule } from '@ngrx/effects';
 import { AuthService } from './services/auth.service';

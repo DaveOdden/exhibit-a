@@ -17,16 +17,19 @@ import { MoneyCreditCardsComponent } from './money-credit-cards/money-credit-car
 
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './components/login/login.component';
+// import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'login', component: LoginComponent, data: { animation: 'login' } },
-  { path: 'status', component: StatusComponent, data: { animation: 'login' } },
+  { path: 'login', component: LoginComponent, data: { animation: 'LoginPage' } },
+  { path: 'status', component: StatusComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'money',
     component: MoneyComponent,
+    data: {
+    },
     children: [
       {
         path: '',
@@ -51,11 +54,7 @@ const routes: Routes = [
   }, {
     path: 'micro-interactions',
     component: MicroInteractionsComponent,
-    data: {
-      animation: 'login'
-    },
-    children: [
-      {
+    children: [ {
         path: '',
         component: MicroInteractionsSelectionListComponent,
         data: {
@@ -67,10 +66,9 @@ const routes: Routes = [
         data: {
           leftNav: 'back'
         }
-      }
-    ]
+    } ]
   },
-  { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'status' }, },
+  { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'NavMenu'} },
   { path: '**', redirectTo: '/' },
 ];
 

@@ -26,7 +26,7 @@
 	<button mat-button [matMenuTriggerFor]="menu" class="app-header__btn app-header__btn--secondary"><div class=" icon-options-vertical"></div></button>
 	<mat-menu #menu="matMenu">
 		<button mat-menu-item>Settings</button>
-		<button mat-menu-item>Logout</button>
+		<button mat-menu-item (click)="googleSignOut()">Logout</button>
 	</mat-menu>
 
 	<nav class="view-navigation" *ngIf="secondaryNavItems.length">

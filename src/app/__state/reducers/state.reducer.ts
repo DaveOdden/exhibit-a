@@ -29,6 +29,7 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Ac
 		case StateActions.SET_AUTH:
 			if (action.payload != null) {
 				const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
+				console.log(action.payload);
 				returnSetAuthState[0].auth = action.payload;
 				return returnSetAuthState;
 			}

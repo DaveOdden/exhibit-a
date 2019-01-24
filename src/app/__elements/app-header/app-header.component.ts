@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-login';
 import { Store } from '@ngrx/store';
-import { NgRxStore, AppState } from '../../app.interfaces'
-import * as StateActions from '../../__state/state.actions'
+import { NgRxStore, AppState } from '../../app.interfaces';
+import * as StateActions from '../../__state/state.actions';
 
 @Component({
   selector: 'app-app-header',
@@ -17,7 +18,7 @@ export class AppHeaderComponent implements OnInit {
   buttonType = 'menu';
   isAuthenticated = false;
 
-  constructor( private store: Store<AppState> ) {
+  constructor( private store: Store<AppState>, private socialAuthService: AuthService ) {
   }
 
   ngOnInit() {
@@ -31,5 +32,13 @@ export class AppHeaderComponent implements OnInit {
       }
     });
   }
+
+  public googleSignOut() {
+		this.socialAuthService.signOut().then(
+      (userData) => {
+        console.log(userData);
+      }
+		);
+	}
 
 }
