@@ -5,7 +5,7 @@ import { Action } from '@ngrx/store';
 import { tap, map, switchMap } from 'rxjs/operators';
 
 
-import { User } from '../models/user';
+import { User } from '../app.interfaces';
 
 
 @Injectable()

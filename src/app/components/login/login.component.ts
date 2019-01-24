@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { NgRxStore, AppState, selectAuthState } from '../../app.interfaces'
 import { LogIn } from '../../__state/auth.actions';
-import { User } from '../../models/user';
+import { User } from '../../app.interfaces';
 import { State } from 'src/app/__state/reducers/auth.reducer';
 
 @Component( {

@@ -55,6 +55,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { AuthService } from './services/auth.service';
 import { AuthEffects } from './__state/effects/auth.effects';
 import { MoneyComponent } from './money/money.component';
+import { MoneySelectionListComponent } from './money-selection-list/money-selection-list.component';
+import { MoneyRecurringPaymentsComponent } from './money-recurring-payments/money-recurring-payments.component';
+import { MoneyCreditCardsComponent } from './money-credit-cards/money-credit-cards.component';
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -83,7 +86,10 @@ export function getAuthServiceConfigs() {
     LoginComponent,
     SignUpComponent,
     LandingComponent,
-    MoneyComponent
+    MoneyComponent,
+    MoneySelectionListComponent,
+    MoneyRecurringPaymentsComponent,
+    MoneyCreditCardsComponent
   ],
   imports: [
     FormsModule,

@@ -184,6 +184,7 @@ Slow 3G
 
 # Posterity
 
+- TODO: NgRx Flow Chart
 - TODO: How to configure web components
 - TODO: Google Auth Outline
 

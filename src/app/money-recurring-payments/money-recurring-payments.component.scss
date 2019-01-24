@@ -1,0 +1,51 @@
+
+// DRY
+:host mat-list-item { width: 100%; min-height: 60px !important; }
+// DRY
+:host mat-list { margin: 0; }
+// DRY
+.group-heading { font-size: 1rem; margin: 1rem .25rem 0 .75rem; }
+
+.payment-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ccc;
+  background-position: center top;
+  border-radius: .5rem;
+  margin: 0 1rem 0 0;
+  &.mortgage { background-image: url("../../assets/images/payments-mortgage.png") }
+  &.netflix { background-image: url("../../assets/images/2000px-Netflix_icon.svg.png") }
+  &.erie { background-image: url("../../assets/images/payments-erie.jpeg") }
+  &.amazon-prime { background-image: url("../../assets/images/payments-amazon-prime.png"); }
+  &.spotify { background-image: url("../../assets/images/payments-spotify.png"); }
+  &.xfinity { background-image: url("../../assets/images/payments-xfinity.png"); }  
+}
+
+.list-name {
+  font-size: 1rem;
+  margin: 0;
+  color: #444;
+  font-weight: normal;
+}
+
+.payment-due-date {
+  color: #666;
+  display: block;
+  font-size: .75rem;
+}
+
+.payment-amount {
+  margin: 0;
+  color: #dd4242;
+}
+
+.payment-info {
+  flex-grow: 1;
+}

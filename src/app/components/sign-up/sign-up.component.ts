@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { User } from '../../models/user';
+import { User } from '../../app.interfaces';
 import { AppState, selectAuthState } from '../../app.interfaces';
 import { SignUp } from '../../__state/auth.actions';
 

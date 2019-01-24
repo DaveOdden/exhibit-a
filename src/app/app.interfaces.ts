@@ -30,4 +30,11 @@ export interface NameUrl {
 	url: string;
 }
 
+export class User {
+  id?: string;
+  email?: string;
+  password?: string;
+  token?: string;
+}
+
 export const selectAuthState = createFeatureSelector<SimpleAuthState>('auth');

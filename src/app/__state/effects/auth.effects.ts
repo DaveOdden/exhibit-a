@@ -9,7 +9,7 @@ import {
   AuthActionTypes,
   LogIn, LogInSuccess, LogInFailure,
   SignUp, SignUpSuccess, SignUpFailure, LogOut
-} from '../auth.actions';import { User } from '../../models/user';
+} from '../auth.actions';
 
 @Injectable()
 export class AuthEffects {
