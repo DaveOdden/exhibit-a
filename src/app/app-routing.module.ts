@@ -19,6 +19,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 // import { LoginComponent } from './components/login/login.component';
 import { LoginComponent } from './login/login.component';
+import { RecruiterLogComponent } from './recruiter-log/recruiter-log.component';
+import { RecruiterLogListComponent } from './recruiter-log-list/recruiter-log-list.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -26,7 +28,16 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, data: { animation: 'LoginPage' } },
   { path: 'status', component: StatusComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'money',
+  { path: 'recruiter-log',
+    component: RecruiterLogComponent,
+    children: [ {
+      path: '',
+      component: RecruiterLogListComponent,
+      data: {
+        leftNav: 'menu'
+      }
+    } ]
+  }, { path: 'money',
     component: MoneyComponent,
     data: {
     },

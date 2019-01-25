@@ -58,6 +58,8 @@ import { MoneyComponent } from './money/money.component';
 import { MoneySelectionListComponent } from './money-selection-list/money-selection-list.component';
 import { MoneyRecurringPaymentsComponent } from './money-recurring-payments/money-recurring-payments.component';
 import { MoneyCreditCardsComponent } from './money-credit-cards/money-credit-cards.component';
+import { RecruiterLogComponent } from './recruiter-log/recruiter-log.component';
+import { RecruiterLogListComponent } from './recruiter-log-list/recruiter-log-list.component';
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -89,7 +91,9 @@ export function getAuthServiceConfigs() {
     MoneyComponent,
     MoneySelectionListComponent,
     MoneyRecurringPaymentsComponent,
-    MoneyCreditCardsComponent
+    MoneyCreditCardsComponent,
+    RecruiterLogComponent,
+    RecruiterLogListComponent
   ],
   imports: [
     FormsModule,
