@@ -54,9 +54,9 @@ Note: if you wish to test on your mobile device locally, you need to run `ng ser
 
 ## Refinement
 
-- Store Google Auth data in NgRx Store AND a cookie to persist auth
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
+- Store Google Auth data in NgRx Store AND a cookie to persist auth
 - Route interceptor / activateRoute for page protection based on auth.
 - Route "resolves" for pre view load logic 
 

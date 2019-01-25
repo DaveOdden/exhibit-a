@@ -27,10 +27,22 @@ const storeObj: NgRxStore = {
 export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Actions) {
 	switch (action.type) {
 		case StateActions.SET_AUTH:
-			if (action.payload != null) {
-				const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
+		const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
+		if (action.payload != null) {
 				console.log(action.payload);
 				returnSetAuthState[0].auth = action.payload;
+				return returnSetAuthState;
+			} else {
+				let auth = {
+					id: '',
+					name: '',
+					email: '',
+					image: '',
+					token: '',
+					idToken: '',
+					provider: 'google'
+				}
+				returnSetAuthState[0].auth = auth;
 				return returnSetAuthState;
 			}
 			break;
