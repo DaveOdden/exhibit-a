@@ -24,7 +24,7 @@ I want a project to showcase a variety of technologies, techniques and interesti
 5. run `npm run start` to compile the app and spin up the local server.
 6. Head to the local url in the browser
 
-Note: if you wish to test on your mobile device locally, you need to run `ng serve --host=[your ip address]`
+*Note:* if you wish to test on your mobile device locally, you need to run `ng serve --host=[your ip address]`
 
 <a name="currentlist"></a>
 
