@@ -23,7 +23,7 @@ export class LogInSuccess implements Action {
 
 export class LogInFailure implements Action {
   readonly type = AuthActionTypes.LOGIN_FAILURE;
-  constructor(public payload: any) {console.log('in login failure');}
+  constructor(public payload: any) { console.log('in login failure'); }
 }
 
 export class SignUp implements Action {

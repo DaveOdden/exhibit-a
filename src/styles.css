@@ -2,6 +2,10 @@
 @import "assets/bower_components/simple-line-icons/css/simple-line-icons.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+* {
+	-webkit-transform: translate3d(0,0,0);
+}
+
 html, body, app-root, app-root > div {
 	height: 100%;
 	overflow: hidden;

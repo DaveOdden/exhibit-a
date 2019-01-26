@@ -13,5 +13,6 @@ router-outlet ~ * {
   height: calc(100% - 48px);
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 

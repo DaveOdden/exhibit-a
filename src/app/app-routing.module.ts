@@ -80,7 +80,7 @@ const routes: Routes = [
     } ]
   },
   { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'NavMenu'} },
-  { path: '**', redirectTo: '/' },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

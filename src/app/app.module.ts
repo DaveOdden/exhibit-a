@@ -46,7 +46,8 @@ import {
   MatIconModule,
   MatListModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule,
+  MatExpansionModule,
 } from '@angular/material';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { LandingComponent } from './components/landing/landing.component';
@@ -118,6 +119,7 @@ export function getAuthServiceConfigs() {
     MatListModule,
     MatMenuModule,
     MatCardModule,
+    MatExpansionModule,
     DragDropModule,
     EffectsModule.forRoot([AuthEffects]),
   ],

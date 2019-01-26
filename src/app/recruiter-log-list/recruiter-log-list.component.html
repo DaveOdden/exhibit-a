@@ -11,81 +11,201 @@
 <mat-card cdkDrag style="width: 50%">Authentic Digital Agency</mat-card>
 <mat-card cdkDrag style="width: 50%">Hays Consulting</mat-card>
 -->
-<mat-form-field class="p-0 px-4 full-width">
-	<input type="text" matInput placeholder="Search">
-</mat-form-field>
-<mat-list>
-	
-	<mat-list-item>
-		<div matLine>Astyra Corporation</div>
-		<small matLine>James Rives</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
 
-	<mat-list-item>
-		<div matLine>Vaco Technology</div>
-		<small matLine>Matt Davidson</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+<div class="view-container grey-bg">
+	<mat-form-field class="p-0 px-4 full-width">
+		<input type="text" matInput placeholder="Search">
+	</mat-form-field>
 
-	<mat-list-item>
-		<div matLine>Recruiting Concepts</div>
-		<small matLine>Gaelen Kash</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+	<mat-accordion>
 
-	<mat-list-item>
-		<div matLine>TECHEAD</div>
-		<small matLine>Kim Oliver</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+		<!-- Expansion 1 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Astyra Corporation
+				</mat-panel-title>
+				<mat-panel-description>
+					James Rives
+				</mat-panel-description>
+			</mat-expansion-panel-header>
 
-	<mat-list-item>
-		<div matLine>Morton Consulting</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
 
-	<mat-list-item>
-		<div matLine>Slate Consulting</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+		<!-- Expansion 2 -->
+		<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Vaco Technology
+				</mat-panel-title>
+				<mat-panel-description>
+					Matt Davidson
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+		</mat-expansion-panel>
 
-	<mat-list-item>
-		<div matLine>Farnheight IT</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+		<!-- Expansion 3 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Recruiting Concepts
+				</mat-panel-title>
+				<mat-panel-description>
+					Gaelen Kash
+				</mat-panel-description>
+			</mat-expansion-panel-header>
 
-	<mat-list-item>
-		<div matLine>Profiles</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
 
-	<mat-list-item>
-		<div matLine>Collebra</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+		<!-- Expansion 4 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					TECHEAD
+				</mat-panel-title>
+				<mat-panel-description>
+					Kim Oliver
+				</mat-panel-description>
+			</mat-expansion-panel-header>
 
-	<mat-list-item>
-		<div matLine>Authentic Digital Agency</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
 
-	<mat-list-item>
-		<div matLine>Hays Consulting</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+		<!-- Expansion 4 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Morton Consulting
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
 
-	<mat-list-item>
-		<div matLine>Robert Half</div>
-		<small matLine>-</small>
-		<mat-divider></mat-divider>
-	</mat-list-item>
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
 
-</mat-list>
+		<!-- Expansion 5 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Slate Consulting
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 6 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Farnheight IT
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 7 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Profiles
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 8 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Collebra
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 9 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Authentic Digital Agency
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 10 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Hays Consulting
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+		<!-- Expansion 11 -->
+		<mat-expansion-panel>
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Robert Half
+				</mat-panel-title>
+				<mat-panel-description>
+					-
+				</mat-panel-description>
+			</mat-expansion-panel-header>
+
+			<div>
+				<small>Last Contact: 1/24/19 via Linkedin</small>
+			</div>
+		</mat-expansion-panel>
+
+	</mat-accordion>
+</div>
