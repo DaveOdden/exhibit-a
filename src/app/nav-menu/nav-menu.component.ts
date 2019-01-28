@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { NgRxStore, AppState } from '../app.interfaces';
+import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppState>) {
+    this.store.dispatch(new StateActions.ChangeHeaderButtonType('menu') );
+  }
 
   ngOnInit() {
   }
