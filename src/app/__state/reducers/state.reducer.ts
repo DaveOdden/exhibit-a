@@ -54,10 +54,19 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Ac
 			return newObj;
 		case StateActions.CHANGE_HEADER_TITLE:
 			const  newObjectAA: NgRxStore[] = _.cloneDeep(state);
-			console.log('funnel through reducer');
-			console.log(newObjectAA);
+			// console.log('funnel through reducer');
+			// console.log(newObjectAA);
 			newObjectAA[0].header.title = action.payload;
 			return newObjectAA;
+		case StateActions.CHANGE_HEADER_ATTRIBUTES:
+			const  newHeaderAtts: NgRxStore[] = _.cloneDeep(state);
+			console.log('candle whip');
+			console.log(action.payload);
+			for( let keyName in action.payload ) {
+				console.log(keyName);
+				newHeaderAtts[0].header[keyName] = action.payload[keyName];
+			}
+			return newHeaderAtts;
 		default:
 			return state;
 	}

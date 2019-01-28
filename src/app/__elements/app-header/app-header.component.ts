@@ -44,9 +44,9 @@ export class AppHeaderComponent implements OnInit {
   ngOnInit() {
     this.store.select('appState').subscribe(( state: NgRxStore[] ) => {
       if ( state !== undefined ) {
-        console.log('changing header title');
+        //console.log('changing header title');
         this.buttonType = state[0].header.leftButtonType;
-        console.log(state[0].header);
+        //console.log(state[0].header);
         this.headerTitle = state[0].header.title;
         this.isAuthenticated = state[0].auth.id !== '' ? true : false;
       }
