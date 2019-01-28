@@ -22,21 +22,24 @@ export class AppComponent {
 
 	// authIsLoading: boolean = true;
 	// userIsLoggedIn: boolean = false;
-	// user;
-
-  constructor( private socialAuthService: AuthService, private router: Router, private store: Store<AppState> ) {
+  // user;
+  
+  constructor( private socialAuthService: AuthService,
+               private router: Router,
+               private store: Store<AppState> ) {
     // console.log('in app component');
 		// this.socialAuthService.authState.subscribe((user) => {
     //   this.user = user;
 		// 	this.userIsLoggedIn = (user != null);
 		// 	this.authIsLoading = user !== null ? false : true;
     // });
+
     router.events.subscribe((val) => {
       // console.log('router event');
-      // console.log(val); 
+      //console.log(router); 
       if(val instanceof NavigationEnd) {
         //this.store.dispatch(new StateActions.ChangeHeaderTitle('Fart Knocker') );
-        this.store.dispatch(new StateActions.ChangeHeaderAttributes(<any>val) );
+        //this.store.dispatch(new StateActions.ChangeHeaderAttributes(<any>val) );
       }
     });
   }

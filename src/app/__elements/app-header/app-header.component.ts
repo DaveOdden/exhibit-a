@@ -3,6 +3,7 @@ import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-l
 import { Store } from '@ngrx/store';
 import { NgRxStore, AppState } from '../../app.interfaces';
 import * as StateActions from '../../__state/state.actions';
+import { Location } from '@angular/common';
 
 /**
  * Class constructor
@@ -15,32 +16,15 @@ import * as StateActions from '../../__state/state.actions';
 
 export class AppHeaderComponent implements OnInit {
 
-  /**
-   * Incoming list of secondary navigation items
-   */
   @Input() secondaryNavItems: Array<string> = [];
 
-  /**
-   * default title in header
-   */
   headerTitle = 'Exhibit-A';
-
-  /**
-   * string of button type
-   */
   buttonType = 'menu';
-
-  /**
-   * user authenticated flag
-   */
   isAuthenticated = false;
 
-  constructor( private store: Store<AppState>, private socialAuthService: AuthService ) {
+  constructor( private store: Store<AppState>, private socialAuthService: AuthService, private _location: Location  ) {
   }
 
-  /**
-   * Angular component is ready
-   */
   ngOnInit() {
     this.store.select('appState').subscribe(( state: NgRxStore[] ) => {
       if ( state !== undefined ) {
@@ -53,15 +37,17 @@ export class AppHeaderComponent implements OnInit {
     });
   }
 
-  /**
-   * Sign user out of their Google acount
-   */
   public googleSignOut() {
 		this.socialAuthService.signOut().then(
       (userData) => {
         console.log(userData);
       }
 		);
-	}
+  }
+  
+  public goToPreviousRoute() {
+    console.log('in goToPreviousRoute');
+    this._location.back();
+  }
 
 }

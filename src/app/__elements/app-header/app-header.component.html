@@ -12,7 +12,7 @@
 	</button>
 
 	<!-- LEFT Back Button - (Changes via HeaderStateService) -->
-	<button [routerLink]="['/micro-interactions']"
+	<button (click)="goToPreviousRoute()"
 					*ngIf="buttonType == 'back'"
 					class="app-header__btn app-header__btn--primary icon-arrow-left-circle">
 	</button>
