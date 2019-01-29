@@ -27,6 +27,11 @@ export class LoginComponent implements OnInit {
 			this.authIsRetrieved = user !== null ? false : true;
 			this.store.dispatch(new StateActions.SetAuthState( user ) );
 		} );
+
+		this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+      leftButtonType: 'menu',
+      isOffTop: false
+    }) );
 	}
 
 

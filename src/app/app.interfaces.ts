@@ -22,6 +22,7 @@ export interface NgRxStore {
 
 export interface HeaderState {
 	leftButtonType: string;
+	isOffTop: boolean;
 	title: string;
 }
 

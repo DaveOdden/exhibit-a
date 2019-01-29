@@ -16,6 +16,7 @@ const storeObj: NgRxStore = {
 	},
 	header: {
 		leftButtonType: 'menu',
+		isOffTop: false,
 		title: 'Exhibit-A'
 	},
 	other: {

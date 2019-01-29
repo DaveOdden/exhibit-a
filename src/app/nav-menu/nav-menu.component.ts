@@ -11,7 +11,10 @@ import * as StateActions from '../__state/state.actions';
 export class NavMenuComponent implements OnInit {
 
   constructor(private store: Store<AppState>) {
-    this.store.dispatch(new StateActions.ChangeHeaderButtonType('menu') );
+    this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+      leftButtonType: 'menu',
+      isOffTop: true
+    }) );
   }
 
   ngOnInit() {

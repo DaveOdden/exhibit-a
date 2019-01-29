@@ -21,6 +21,7 @@ export class AppHeaderComponent implements OnInit {
   headerTitle = 'Exhibit-A';
   buttonType = 'menu';
   isAuthenticated = false;
+  isOffTop = false;
 
   constructor( private store: Store<AppState>, private socialAuthService: AuthService, private _location: Location  ) {
   }
@@ -32,6 +33,7 @@ export class AppHeaderComponent implements OnInit {
         this.buttonType = state[0].header.leftButtonType;
         //console.log(state[0].header);
         this.headerTitle = state[0].header.title;
+        this.isOffTop = state[0].header.isOffTop;
         this.isAuthenticated = state[0].auth.id !== '' ? true : false;
       }
     });
@@ -46,7 +48,6 @@ export class AppHeaderComponent implements OnInit {
   }
   
   public goToPreviousRoute() {
-    console.log('in goToPreviousRoute');
     this._location.back();
   }
 
