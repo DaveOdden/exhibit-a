@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
 		} );
 
 		this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+			title: 'Login',
       leftButtonType: 'menu',
       isOffTop: false
     }) );

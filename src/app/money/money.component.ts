@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from '../app.interfaces';
+import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-money',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoneyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppState>) {
+    this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+      title: 'Money',
+      leftButtonType: 'menu',
+      isOffTop: false
+    }) );
+  }
 
   ngOnInit() {
   }

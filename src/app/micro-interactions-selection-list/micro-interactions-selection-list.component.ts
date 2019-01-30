@@ -12,7 +12,6 @@ import * as StateActions from '../__state/state.actions';
 export class MicroInteractionsSelectionListComponent implements OnInit {
 
   constructor( private store: Store<AppState> ) {
-    this.store.dispatch(new StateActions.ChangeHeaderTitle('Test') );
     this.store.dispatch(new StateActions.ChangeHeaderButtonType('menu') );
   }
 

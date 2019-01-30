@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
+import { Store } from '@ngrx/store';
+import { AppState } from '../app.interfaces';
+import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-status',
@@ -14,7 +17,7 @@ export class StatusComponent implements OnInit {
 	userIsLoggedIn: boolean = false;
   user;
   
-  constructor( private socialAuthService: AuthService ) {
+  constructor( private socialAuthService: AuthService, private store: Store<AppState> ) {
     this.socialAuthService.authState.subscribe((user) => {
 			console.log(user);
       this.user = user;
@@ -22,6 +25,12 @@ export class StatusComponent implements OnInit {
 			this.authIsLoading = user !== null ? false : true;
 			this.authIsRetrieved = user !== null ? false : true;
     });
+
+    this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+      title: 'App Status',
+      leftButtonType: 'menu',
+      isOffTop: false
+    }) );
   }
 
   ngOnInit() {

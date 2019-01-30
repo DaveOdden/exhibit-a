@@ -12,8 +12,11 @@ import * as StateActions from '../__state/state.actions';
 export class DashboardComponent implements OnInit {
 
 	constructor( private store: Store<AppState> ) {
-		console.log('initiate HEADER CHANGE');
-    this.store.dispatch(new StateActions.ChangeHeaderTitle('Dashvoard') );
+		this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+			title: 'Dashboard',
+      leftButtonType: 'menu',
+      isOffTop: false
+    }) );
 	}
 
 	ngOnInit() {
