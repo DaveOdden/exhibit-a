@@ -10,8 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './__state/reducers/state.reducer';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
-import { Http } from '@angular/http';
 
 // Third-Party
 import {
@@ -58,6 +56,7 @@ import { LoginComponent } from './login/login.component';
 
 import { EffectsModule } from '@ngrx/effects';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './app.auth-guard.service';
 import { AuthEffects } from './__state/effects/auth.effects';
 import { MoneyComponent } from './money/money.component';
 import { MoneySelectionListComponent } from './money-selection-list/money-selection-list.component';
@@ -105,7 +104,6 @@ export function getAuthServiceConfigs() {
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpModule,
     StoreModule.forRoot({
       appState: reducer
     }),
@@ -126,7 +124,7 @@ export function getAuthServiceConfigs() {
     DragDropModule,
     EffectsModule.forRoot([AuthEffects]),
   ],
-  providers: [ Http, AuthService, {
+  providers: [ AuthGuardService, AuthService, {
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs,
   }],

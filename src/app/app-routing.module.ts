@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CanActivate, RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
 import { AuthAccess } from './app.auth.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MoneyComponent } from './money/money.component';
@@ -24,7 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { RecruiterLogComponent } from './recruiter-log/recruiter-log.component';
 import { RecruiterLogListComponent } from './recruiter-log-list/recruiter-log-list.component';
 
-import { 
+import {
   AuthGuardService as AuthGuard 
 } from './app.auth-guard.service';
 
