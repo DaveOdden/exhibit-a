@@ -30,7 +30,6 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Ac
 		case StateActions.SET_AUTH:
 		const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
 		if (action.payload != null) {
-				console.log(action.payload);
 				returnSetAuthState[0].auth = action.payload;
 				return returnSetAuthState;
 			} else {
@@ -55,16 +54,11 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions.Ac
 			return newObj;
 		case StateActions.CHANGE_HEADER_TITLE:
 			const  newObjectAA: NgRxStore[] = _.cloneDeep(state);
-			// console.log('funnel through reducer');
-			// console.log(newObjectAA);
 			newObjectAA[0].header.title = action.payload;
 			return newObjectAA;
 		case StateActions.CHANGE_HEADER_ATTRIBUTES:
 			const  newHeaderAtts: NgRxStore[] = _.cloneDeep(state);
-			console.log('candle whip');
-			console.log(action.payload);
 			for( let keyName in action.payload ) {
-				console.log(keyName);
 				newHeaderAtts[0].header[keyName] = action.payload[keyName];
 			}
 			return newHeaderAtts;

@@ -3,6 +3,7 @@ import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-l
 import { Store } from '@ngrx/store';
 import { AppState } from '../app.interfaces';
 import * as StateActions from '../__state/state.actions';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-login',
@@ -18,7 +19,20 @@ export class LoginComponent implements OnInit {
 	googleUserData = [];
 	user;
 
-	constructor( private store: Store<AppState>, private socialAuthService: AuthService ) {
+	urlRedirect: string;
+
+	constructor(
+			private store: Store<AppState>,
+			private socialAuthService: AuthService,
+			private route: ActivatedRoute
+	) {
+
+		this.route.queryParams.subscribe(params => {
+			console.log(params);
+			this.urlRedirect = params['redirect'];
+			console.log(this.urlRedirect);
+		} );
+
 		this.socialAuthService.authState.subscribe((user) => {
 			this.user = user;
 			this.userIsLoggedIn = (user != null);

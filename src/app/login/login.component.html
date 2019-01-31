@@ -36,6 +36,12 @@
   </div> -->
 
 <div class="p-4">
+
+  <!-- Auth Redirect Message -->
+  <div *ngIf="urlRedirect">
+    <div class="alert alert-danger">You must login to see that page.</div>
+  </div>
+
   <!-- Sign In Module -->
   <div *ngIf="!viewIsLoading && !userIsLoggedIn" style="background-color: white">
     <h1>Sign In</h1>
