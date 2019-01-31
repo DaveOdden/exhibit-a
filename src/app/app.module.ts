@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './__state/reducers/state.reducer';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { Http } from '@angular/http';
 
 // Third-Party
 import {
@@ -103,6 +105,7 @@ export function getAuthServiceConfigs() {
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpModule,
     StoreModule.forRoot({
       appState: reducer
     }),
@@ -123,9 +126,9 @@ export function getAuthServiceConfigs() {
     DragDropModule,
     EffectsModule.forRoot([AuthEffects]),
   ],
-  providers: [ AuthService, {
+  providers: [ Http, AuthService, {
     provide: AuthServiceConfig,
-    useFactory: getAuthServiceConfigs
+    useFactory: getAuthServiceConfigs,
   }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
