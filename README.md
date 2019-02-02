@@ -41,6 +41,7 @@ I want a project to showcase a variety of technologies, techniques and interesti
   - Custom UI Components
   - Router
   - Route Transitions
+	- Auth Guards for Protected Routes
 - NgRx - State Management
 - Angular Material - Prebuilt Components & Styles
 - HammerJS - Mobile Gesture Support
@@ -57,7 +58,6 @@ I want a project to showcase a variety of technologies, techniques and interesti
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
 - Store Google Auth data in NgRx Store AND a cookie to persist auth
-- Route interceptor / activateRoute for page protection based on auth.
 - Route "resolves" for pre view load logic 
 
 <a name="comingplans"></a>
