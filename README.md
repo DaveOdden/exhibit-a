@@ -50,14 +50,15 @@ I want a project to showcase a variety of technologies, techniques and interesti
 - Google Authentication
 - Web Components (Vaadin)
 - Font Icons (Simple Line Icons)
+- Local Storage
 
 <a name="refinement"></a>
 
 ## Refinement
 
+- Store Google Auth data in NgRx Store AND a cookie to persist auth
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
-- Store Google Auth data in NgRx Store AND a cookie to persist auth
 - Route "resolves" for pre view load logic 
 
 <a name="comingplans"></a>
@@ -214,8 +215,10 @@ If this app is forked or pulled down, it will not successfully build. I have a c
 
 # Captains Log
 
-- 1/22/19: convert angular cli project to use SCSS - https://github.com/angular/angular-cli/wiki/stories-css-preprocessors
-- 1/20/19: using ngrx for state and authentication - https://mherman.org/blog/authentication-in-angular-with-ngrx/
+- 1/22/19: convert angular cli project to use SCSS
+	- https://github.com/angular/angular-cli/wiki/stories-css-preprocessors
+- 1/20/19: using ngrx for state and authentication
+	- https://mherman.org/blog/authentication-in-angular-with-ngrx/
 - 1/19/19: `(<any>this.actions).ofType( ... )` needed to avoid typing error.
 - 1/19/19: When using `ng generate service [service-name]` you must define the module like so: `ng generate service services/auth --module=app`.
 - 1/18/19: A security vulnerability was detected by Github. the origins of this appear to be angular devkit. Look into upgrading devkit to resolve this vulnerability.
