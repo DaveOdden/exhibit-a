@@ -16,8 +16,10 @@ export class AuthGuardService implements CanActivate {
 
     this.store.select('appState').subscribe(s => stateLocal = s);
     console.log(state.url);
+    console.log('auth guard');
+    console.log(localStorage.getItem('token'));
 
-    if( stateLocal[0].auth.id ) {
+    if( localStorage.getItem('token') != null ) {
       return true;
     } else {
       this.router.navigate(['/login'], {

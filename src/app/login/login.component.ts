@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
 	) {
 
 		this.route.queryParams.subscribe(params => {
-			console.log(params);
 			this.urlRedirect = params['redirect'];
-			console.log(this.urlRedirect);
 		} );
 
 		this.socialAuthService.authState.subscribe((user) => {
@@ -72,6 +70,8 @@ export class LoginComponent implements OnInit {
   public googleSignIn() {
     this.socialAuthService.signIn( GoogleLoginProvider.PROVIDER_ID ).then( (userData) => {
 			this.googleUserData = this.createKeyVals( userData );
+			console.log(userData);
+			localStorage.setItem('token', userData.token);
 		} );
 	}
 
@@ -81,6 +81,8 @@ export class LoginComponent implements OnInit {
 				console.log(userData);
 				console.log(this.user);
 				this.store.dispatch(new StateActions.SetAuthState( this.user ) );
+				localStorage.removeItem('token');
+
       }
 		);
 	}
