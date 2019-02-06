@@ -38,7 +38,7 @@
 <div class="p-4">
 
   <!-- Auth Redirect Message -->
-  <div *ngIf="urlRedirect">
+  <div *ngIf="urlRedirect && !userIsLoggedIn">
     <div class="alert alert-danger">You must login to see that page.</div>
   </div>
 
