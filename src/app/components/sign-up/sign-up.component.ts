@@ -25,7 +25,6 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
     this.getState.subscribe((state) => {
-      console.log(state);
       this.errorMessage = state.errorMessage;
     });
   }

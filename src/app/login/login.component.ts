@@ -78,8 +78,6 @@ export class LoginComponent implements OnInit {
 	public googleSignOut() {
 		this.socialAuthService.signOut().then(
       (userData) => {
-				console.log(userData);
-				console.log(this.user);
 				this.store.dispatch(new StateActions.SetAuthState( this.user ) );
 				localStorage.removeItem('token');
 

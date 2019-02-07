@@ -19,7 +19,6 @@ export class StatusComponent implements OnInit {
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState> ) {
     this.socialAuthService.authState.subscribe((user) => {
-			console.log(user);
       this.user = user;
 			this.userIsLoggedIn = (user != null);
 			this.authIsLoading = user !== null ? false : true;

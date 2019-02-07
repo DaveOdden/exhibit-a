@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.getState.subscribe((state) => {
-      console.log(state);
       if( state !== undefined && state.hasOwnProperty('errorMessage'))
       this.errorMessage = state.errorMessage;
     });

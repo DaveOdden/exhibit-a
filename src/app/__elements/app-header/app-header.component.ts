@@ -24,9 +24,6 @@ export class AppHeaderComponent implements OnInit {
   isOffTop = false;
 
   constructor( private store: Store<AppState>, private socialAuthService: AuthService, private _location: Location  ) {
-  }
-
-  ngOnInit() {
     this.store.select('appState').subscribe(( state: NgRxStore[] ) => {
       if ( state !== undefined ) {
         this.buttonType = state[0].header.leftButtonType;
@@ -35,6 +32,9 @@ export class AppHeaderComponent implements OnInit {
         this.isAuthenticated = state[0].auth.id !== '' ? true : false;
       }
     });
+  }
+
+  ngOnInit() {
   }
 
   public googleSignOut() {

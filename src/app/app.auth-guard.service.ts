@@ -15,10 +15,7 @@ export class AuthGuardService implements CanActivate {
     let stateLocal: NgRxStore[];
 
     this.store.select('appState').subscribe(s => stateLocal = s);
-    console.log(state.url);
-    console.log('auth guard');
-    console.log(localStorage.getItem('token'));
-
+    
     if( localStorage.getItem('token') != null ) {
       return true;
     } else {
