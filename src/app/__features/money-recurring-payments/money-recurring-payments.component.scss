@@ -32,14 +32,14 @@
   background-position: center top;
   border-radius: .5rem;
   margin: 0 1rem 0 0;
-  &.mortgage { background-image: url("../../assets/images/payments-mortgage.png") }
-  &.mazda { background-image: url("../../assets/images/payments-mazda.png"); }  
-  &.netflix { background-image: url("../../assets/images/payments-netflix.png") }
-  &.erie { background-image: url("../../assets/images/payments-erie.jpeg") }
-  &.amazon-prime { background-image: url("../../assets/images/payments-amazon-prime.png"); }
-  &.spotify { background-image: url("../../assets/images/payments-spotify.png"); }
-  &.xfinity { background-image: url("../../assets/images/payments-xfinity.png"); }  
-  &.playstation { background-image: url("../../assets/images/payments-playstation.png"); }  
+  &.mortgage { background-image: url("../../../assets/images/payments-mortgage.png") }
+  &.mazda { background-image: url("../../../assets/images/payments-mazda.png"); }  
+  &.netflix { background-image: url("../../../assets/images/payments-netflix.png") }
+  &.erie { background-image: url("../../../assets/images/payments-erie.jpeg") }
+  &.amazon-prime { background-image: url("../../../assets/images/payments-amazon-prime.png"); }
+  &.spotify { background-image: url("../../../assets/images/payments-spotify.png"); }
+  &.xfinity { background-image: url("../../../assets/images/payments-xfinity.png"); }  
+  &.playstation { background-image: url("../../../assets/images/payments-playstation.png"); }  
 }
 
 .list-name {

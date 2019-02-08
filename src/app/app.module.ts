@@ -21,16 +21,15 @@ import {
 // Components
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatusComponent } from './status/status.component';
 import { AppHeaderComponent } from './__elements/app-header/app-header.component';
 import { DateTraversalComponent } from './__elements/date-traversal/date-traversal.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { MicroInteractionsComponent } from './micro-interactions/micro-interactions.component';
+import { MicroInteractionsComponent } from './__features/micro-interactions/micro-interactions.component';
 import {
   MicroInteractionsDisableBtnDuringApiCallComponent
-} from './micro-interactions-disable-btn-during-api-call/micro-interactions-disable-btn-during-api-call.component';
-import { MicroInteractionsSelectionListComponent } from './micro-interactions-selection-list/micro-interactions-selection-list.component';
+} from './__features/micro-interactions-disable-btn-during-api-call/micro-interactions-disable-btn-during-api-call.component';
+import { MicroInteractionsSelectionListComponent } from './__features/micro-interactions-selection-list/micro-interactions-selection-list.component';
 
 // Other
 import * as secrets from '../../credentials.json';
@@ -55,15 +54,15 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 
 import { EffectsModule } from '@ngrx/effects';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './__services/auth.service';
 import { AuthGuardService } from './app.auth-guard.service';
 import { AuthEffects } from './__state/effects/auth.effects';
-import { MoneyComponent } from './money/money.component';
-import { MoneySelectionListComponent } from './money-selection-list/money-selection-list.component';
-import { MoneyRecurringPaymentsComponent } from './money-recurring-payments/money-recurring-payments.component';
-import { MoneyCreditCardsComponent } from './money-credit-cards/money-credit-cards.component';
-import { RecruiterLogComponent } from './recruiter-log/recruiter-log.component';
-import { RecruiterLogListComponent } from './recruiter-log-list/recruiter-log-list.component';
+import { MoneyComponent } from './__features/money/money.component';
+import { MoneySelectionListComponent } from './__features/money-selection-list/money-selection-list.component';
+import { MoneyRecurringPaymentsComponent } from './__features/money-recurring-payments/money-recurring-payments.component';
+import { MoneyCreditCardsComponent } from './__features/money-credit-cards/money-credit-cards.component';
+import { RecruiterLogComponent } from './__features/recruiter-log/recruiter-log.component';
+import { RecruiterLogListComponent } from './__features/recruiter-log-list/recruiter-log-list.component';
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -79,7 +78,6 @@ export function getAuthServiceConfigs() {
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     StatusComponent,
     AppHeaderComponent,
     DateTraversalComponent,

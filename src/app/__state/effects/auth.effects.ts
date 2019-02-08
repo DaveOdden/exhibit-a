@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { tap, map, switchMap, catchError } from 'rxjs/operators';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../__services/auth.service';
 import {
   AuthActionTypes,
   LogIn, LogInSuccess, LogInFailure,
