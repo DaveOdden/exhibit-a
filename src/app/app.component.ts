@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationStart, NavigationEnd, RoutesRecognized } from '@angular/router';
 import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
-import { routerTransition } from './app-route.animations';
+import { routerTransition } from './app.route-animations';
 import { Store } from '@ngrx/store';
 import { NgRxStore, AppState } from './app.interfaces';
 import * as StateActions from './__state/state.actions';
+import { filter } from 'rxjs/operators';
 
 import '@vaadin/vaadin-item/vaadin-item';
 import '@vaadin/vaadin-grid/vaadin-grid';
@@ -18,36 +19,33 @@ import '@vaadin/vaadin-list-box/vaadin-list-box.js';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-	// authIsLoading: boolean = true;
-	// userIsLoggedIn: boolean = false;
-  // user;
+	authIsLoading: boolean = true;
+	userIsLoggedIn: boolean = false;
+  user;
   
-  constructor( private socialAuthService: AuthService,
-               private router: Router,
-               private store: Store<AppState> ) {
-    // console.log('in app component');
-		// this.socialAuthService.authState.subscribe((user) => {
-    //   this.user = user;
-		// 	this.userIsLoggedIn = (user != null);
-		// 	this.authIsLoading = user !== null ? false : true;
-    // });
+  constructor( private router: Router, private route: ActivatedRoute, private socialAuthService: AuthService, private store: Store<AppState> ) {
+    // listen for router start changes. filter() to navigationStart only and subscribe to changes. pipe is used in order to get filter to work.
+    router.events.pipe( filter( event => event instanceof NavigationStart) ).subscribe( (val) => this.routerChange() );
+  }
 
-    router.events.subscribe((val) => {
-      // console.log('router event');
-      //console.log(router); 
-      if(val instanceof NavigationEnd) {
-        //this.store.dispatch(new StateActions.ChangeHeaderTitle('Fart Knocker') );
-        //this.store.dispatch(new StateActions.ChangeHeaderAttributes(<any>val) );
-      }
-    });
+  ngOnInit() {
   }
 
   prepareRoute(outlet: any) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
-  
+  routerChange() {
+    this.socialAuthService.authState.subscribe((user) => this.setAuthState( user ) );
+  }
+
+  setAuthState( user ) {
+    this.user = user;
+    this.userIsLoggedIn = (user != null);
+    this.authIsLoading = user !== null ? false : true;
+    this.store.dispatch(new StateActions.SetAuthState( user ) );
+  }
 
 }

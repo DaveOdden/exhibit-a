@@ -1,7 +1,11 @@
 
-<div [@routerTransition]="prepareRoute(outlet)">
+<div [@routerTransition]="prepareRoute(outlet)" *ngIf="!authIsLoading">
   <app-app-header headerTitle="Dashboard"></app-app-header>
   <div class="main-viewport">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
+</div>
+
+<div *ngIf="authIsLoading">
+  <mat-progress-spinner class="example-margin" [color]="'accent'" [mode]="'indeterminate'"></mat-progress-spinner>
 </div>

@@ -22,7 +22,9 @@ export class AppHeaderComponent implements OnInit {
 
   constructor( private store: Store<AppState>, private socialAuthService: AuthService, private _location: Location  ) {
     this.store.select('appState').subscribe(( state: NgRxStore[] ) => {
+      //console.log('app state change in header component');
       if ( state !== undefined ) {
+        //console.log(state);
         this.buttonType = state[0].header.leftButtonType;
         this.headerTitle = state[0].header.title;
         this.isOffTop = state[0].header.isOffTop;
