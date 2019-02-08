@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from '../app.interfaces';
-import * as StateActions from '../__state/state.actions';
+import { AppState } from '../../app.interfaces';
+import * as StateActions from '../../__state/state.actions';
 
 @Component({
   selector: 'app-money',
-  templateUrl: './money.component.html',
-  styleUrls: ['./money.component.scss']
+  templateUrl: './money.component.html'
 })
 export class MoneyComponent implements OnInit {
 

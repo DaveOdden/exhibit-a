@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { NgRxStore, AppState } from '../app.interfaces';
-import * as StateActions from '../__state/state.actions';
+import { NgRxStore, AppState } from '../../app.interfaces';
+import * as StateActions from '../../__state/state.actions';
 
 import '@vaadin/vaadin-button';
 

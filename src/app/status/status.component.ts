@@ -6,8 +6,7 @@ import * as StateActions from '../__state/state.actions';
 
 @Component({
   selector: 'app-status',
-  templateUrl: './status.component.html',
-  styleUrls: ['./status.component.scss']
+  templateUrl: './status.component.html'
 })
 export class StatusComponent implements OnInit {
 

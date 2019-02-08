@@ -4,9 +4,7 @@ import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { tap, map, switchMap } from 'rxjs/operators';
 
-
 import { User } from '../app.interfaces';
-
 
 @Injectable()
 export class AuthService {

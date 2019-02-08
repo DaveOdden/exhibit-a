@@ -5,9 +5,6 @@ import { NgRxStore, AppState } from '../../app.interfaces';
 import * as StateActions from '../../__state/state.actions';
 import { Location } from '@angular/common';
 
-/**
- * Class constructor
- */
 @Component({
   selector: 'app-app-header',
   templateUrl: './app-header.component.html',

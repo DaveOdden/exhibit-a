@@ -1,12 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from '../app.interfaces';
-import * as StateActions from '../__state/state.actions';
+import { AppState } from '../../app.interfaces';
+import * as StateActions from '../../__state/state.actions';
 
 @Component({
   selector: 'app-micro-interactions',
-  templateUrl: './micro-interactions.component.html',
-  styleUrls: ['./micro-interactions.component.scss']
+  templateUrl: './micro-interactions.component.html'
 })
 export class MicroInteractionsComponent implements OnInit {
 
