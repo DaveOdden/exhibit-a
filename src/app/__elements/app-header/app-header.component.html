@@ -7,33 +7,37 @@
 
 	<!-- LEFT Menu Button - (Changes via HeaderStateService) -->
 	<button [routerLink]="['/nav-menu']"
-					*ngIf="attrs.buttonType == 'menu' && !attrs.hideButtons"
+					*ngIf="attrs.buttonType == 'menu' && isAuthenticated"
 					class="app-header__btn app-header__btn--primary icon-directions">
 	</button>
 
 	<!-- LEFT Back Button - (Changes via HeaderStateService) -->
 	<button (click)="goToPreviousRoute()"
-					*ngIf="attrs.buttonType == 'back' && !attrs.hideButtons"
+					*ngIf="attrs.buttonType == 'back' && isAuthenticated"
 					class="app-header__btn app-header__btn--primary icon-arrow-left-circle">
 	</button>
 
-	<!-- RIGHT Button Icon - (Changes via HeaderStateService)
+	<!-- RIGHT Button Icon - (NOT USED)	-->
 	<button [routerLink]="['/dashboard']"
-					class="app-header__btn app-header__btn--secondary icon-settings">
+					class="app-header__btn app-header__btn--secondary icon-settings"
+					*ngIf="false">
 	</button>
-	-->
 
+	<!-- Material Dropdown (right button) -->
 	<button mat-button
 					[matMenuTriggerFor]="menu"
 					class="app-header__btn app-header__btn--secondary"
-					*ngIf="!attrs.hideButtons">
+					*ngIf="isAuthenticated">
 		<div class=" icon-options-vertical"></div>
 	</button>
+
 	<mat-menu #menu="matMenu">
 		<button mat-menu-item>Settings</button>
 		<button mat-menu-item (click)="googleSignOut()">Logout</button>
 	</mat-menu>
 
+
+	<!-- Secondary (day, week, month, year)-->
 	<nav class="view-navigation" *ngIf="secondaryNavItems.length">
 		<a *ngFor="let item of secondaryNavItems">{{item}}</a>
 	</nav>

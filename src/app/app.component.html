@@ -1,6 +1,6 @@
 
 <div [@routerTransition]="prepareRoute(outlet)" *ngIf="!authIsLoading">
-  <app-app-header headerTitle="Dashboard"></app-app-header>
+  <app-app-header></app-app-header>
   <div class="main-viewport">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
