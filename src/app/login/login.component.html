@@ -43,13 +43,13 @@
   </div>
 
   <!-- Sign In Module -->
-  <div *ngIf="!viewIsLoading && !userIsLoggedIn" style="background-color: white">
+  <div *ngIf="!userIsLoggedIn" style="background-color: white">
     <h1>Sign In</h1>
     <vaadin-button theme="primary" (click)="googleSignIn()">Sign in with Google</vaadin-button>
   </div>
 
   <!-- Authenticated Content -->
-  <div *ngIf="!viewIsLoading && userIsLoggedIn">
+  <div *ngIf="userIsLoggedIn">
     <vaadin-button theme="primary" (click)="googleSignOut()">Sign Out</vaadin-button>
     <h3>Authentication Details</h3>
     <ul class="side-by-side-list">
