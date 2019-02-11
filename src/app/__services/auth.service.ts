@@ -23,7 +23,7 @@ export class LocalAuthService {
   }
 
   isLoggedIn() {
-    return localStorage.getItem('token') != '' ? true : false;
+    return localStorage.getItem('token') != null ? true : false;
   }
 
   signUp(email: string, password: string): Observable<User> {

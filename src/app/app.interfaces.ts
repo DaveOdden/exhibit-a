@@ -24,6 +24,7 @@ export interface HeaderState {
 	leftButtonType: string;
 	isOffTop: boolean;
 	title: string;
+	hideButtons: boolean;
 }
 
 export interface NameUrl {

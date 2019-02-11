@@ -35,10 +35,8 @@ export class LoginComponent implements OnInit {
 
 	getState() {
 		this.store.select('appState').subscribe( ( state: NgRxStore[] ) => {
-			//console.log(state);
 			if(state[0].auth.id != '') {
 				this.user = state[0].auth;
-				//console.log(this.user);
 				this.googleUserData = this.createKeyVals( this.user );
 			}
 		} );
@@ -53,15 +51,15 @@ export class LoginComponent implements OnInit {
 	setHeaderAttributes() {
 		this.store.dispatch(new StateActions.ChangeHeaderAttributes({
 			title: 'Login',
-      leftButtonType: 'menu',
-      isOffTop: false
+			hideButtons: true
     }) );
 	}
 
   googleSignIn() {
     this.socialAuthService.signIn( GoogleLoginProvider.PROVIDER_ID ).then( (userData) => {
-			// this.googleUserData = this.createKeyVals( userData );
-			localStorage.setItem('token', userData.token);
+			this.googleUserData = this.createKeyVals( userData );
+			this.store.dispatch(new StateActions.SetAuthState( this.user ) );
+			//localStorage.setItem('token', userData.token);
 		} );
 	}
 

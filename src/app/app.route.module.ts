@@ -36,6 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'status',
+    canActivate: [AuthGuard],
     component: StatusComponent,
     resolve: { auth: AuthResolver }
   },
@@ -50,6 +51,7 @@ const routes: Routes = [
       }
     } ]
   }, { path: 'money',
+    canActivate: [AuthGuard],
     component: MoneyComponent,
     data: {
     },
@@ -76,6 +78,7 @@ const routes: Routes = [
     ]
   }, {
     path: 'micro-interactions',
+    canActivate: [AuthGuard],
     component: MicroInteractionsComponent,
     children: [ {
         path: '',
@@ -90,9 +93,13 @@ const routes: Routes = [
           leftNav: 'back'
         }
     } ]
-  },
-  { path: 'nav-menu', component: NavMenuComponent, data: { animation: 'NavMenu'} },
-  { path: '**', redirectTo: '/' }
+  }, {
+    path: 'nav-menu',
+    component: NavMenuComponent,
+    canActivate: [AuthGuard],
+    data: { animation: 'NavMenu'}
+  }, {
+    path: '**', redirectTo: '/'}
 ];
 
 @NgModule({

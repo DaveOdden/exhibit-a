@@ -17,7 +17,8 @@ const storeObj: NgRxStore = {
 	header: {
 		leftButtonType: 'menu',
 		isOffTop: false,
-		title: 'Exhibit-A'
+		title: 'Exhibit-A',
+		hideButtons: false
 	},
 	other: {
 		name: 'Initial Tutorial',

@@ -2,18 +2,18 @@
 
 	<!-- Header -->
 	<div class="app-header__title">
-		<h1>{{headerTitle}}</h1>
+		<h1>{{attrs.headerTitle}}</h1>
 	</div>
 
 	<!-- LEFT Menu Button - (Changes via HeaderStateService) -->
 	<button [routerLink]="['/nav-menu']"
-					*ngIf="buttonType == 'menu'"
+					*ngIf="attrs.buttonType == 'menu' && !attrs.hideButtons"
 					class="app-header__btn app-header__btn--primary icon-directions">
 	</button>
 
 	<!-- LEFT Back Button - (Changes via HeaderStateService) -->
 	<button (click)="goToPreviousRoute()"
-					*ngIf="buttonType == 'back'"
+					*ngIf="attrs.buttonType == 'back' && !attrs.hideButtons"
 					class="app-header__btn app-header__btn--primary icon-arrow-left-circle">
 	</button>
 
@@ -23,7 +23,12 @@
 	</button>
 	-->
 
-	<button mat-button [matMenuTriggerFor]="menu" class="app-header__btn app-header__btn--secondary"><div class=" icon-options-vertical"></div></button>
+	<button mat-button
+					[matMenuTriggerFor]="menu"
+					class="app-header__btn app-header__btn--secondary"
+					*ngIf="!attrs.hideButtons">
+		<div class=" icon-options-vertical"></div>
+	</button>
 	<mat-menu #menu="matMenu">
 		<button mat-menu-item>Settings</button>
 		<button mat-menu-item (click)="googleSignOut()">Logout</button>

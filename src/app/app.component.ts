@@ -21,7 +21,7 @@ import '@vaadin/vaadin-list-box/vaadin-list-box.js';
 
 export class AppComponent implements OnInit {
 
-	authIsLoading: boolean = true;
+	authIsLoading: boolean = false;
 	userIsLoggedIn: boolean = false;
   user;
   
