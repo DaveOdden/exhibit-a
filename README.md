@@ -56,7 +56,7 @@ I want a project to showcase a variety of technologies, techniques and interesti
 
 ## Refinement
 
-- Store Google Auth data in NgRx Store AND a cookie to persist auth
+- Store Google Auth data in NgRx Store AND a local storage (in a Subject) to persist auth
 - Route transitions need to be worked on.
 - So far, no unit tests have been written.
 - Route "resolves" for pre view load logic 
