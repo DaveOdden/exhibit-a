@@ -11,7 +11,7 @@ import { MicroInteractionsDisableBtnDuringApiCallComponent } from './__features/
 import { MicroInteractionsSelectionListComponent } from './__features/micro-interactions-selection-list/micro-interactions-selection-list.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { RecruiterLogComponent } from './__features/recruiter-log/recruiter-log.component';
 import { RecruiterLogListComponent } from './__features/recruiter-log-list/recruiter-log-list.component';
 // import { LoginComponent } from './components/login/login.component';

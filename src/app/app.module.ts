@@ -43,7 +43,7 @@ import { DateTraversalComponent } from './__elements/date-traversal/date-travers
 // Views
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { StatusComponent } from './status/status.component';
 import { MicroInteractionsComponent } from './__features/micro-interactions/micro-interactions.component';
