@@ -43,7 +43,7 @@ import { DateTraversalComponent } from './__elements/date-traversal/date-travers
 // Views
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { StatusComponent } from './status/status.component';
 import { MicroInteractionsComponent } from './__features/micro-interactions/micro-interactions.component';
@@ -60,6 +60,7 @@ import { RecruiterLogListComponent } from './__features/recruiter-log-list/recru
 import { ReadComponent } from './__state/read/read.component';
 import { WriteComponent } from './__state/write/write.component';
 import { EffectsModule } from '@ngrx/effects';
+import { StateEffects } from './__state/effects/state.effects';
 import { AuthEffects } from './__state/effects/auth.effects';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './__state/reducers/state.reducer';
@@ -129,7 +130,7 @@ export function getAuthServiceConfigs() {
     MatExpansionModule,
     MatProgressSpinnerModule,
     DragDropModule,
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, StateEffects]),
   ],
   providers: [
     AuthGuardService,

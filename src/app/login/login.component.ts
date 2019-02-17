@@ -35,8 +35,6 @@ export class LoginComponent implements OnInit {
 
 	getState() {
 		this.store.select('appState').subscribe( ( state: NgRxStore[] ) => {
-			console.log('login component: state subscription');
-			console.log(state);
 			this.userIsLoggedIn = false;
 			if(state[0].auth.id != '') {
 				this.userIsLoggedIn = true;
@@ -60,23 +58,12 @@ export class LoginComponent implements OnInit {
 	}
 
   googleSignIn() {
-    // this.socialAuthService.signIn( GoogleLoginProvider.PROVIDER_ID ).then( (userData) => {
-		// 	this.googleUserData = this.createKeyVals( userData );
-		// 	this.store.dispatch(new StateActions.SetAuthState( userData ) );
-		// 	//localStorage.setItem('token', userData.token);
-		// } );
-
-		// initiate sign in and dispatch user data
-		this.socialAuthService.signIn( GoogleLoginProvider.PROVIDER_ID ).then( (userData) => this.store.dispatch(new StateActions.SetAuthState( userData ) ) );
+		console.log('1. GoogleSignIn()');
+		this.store.dispatch( new StateActions.LogIn( GoogleLoginProvider.PROVIDER_ID ) );
 	}
 
 	googleSignOut() {
-		this.socialAuthService.signOut().then(
-      (userData) => {
-				this.store.dispatch(new StateActions.SetAuthState( this.user ) );
-				localStorage.removeItem('token');
-      }
-		);
+		this.socialAuthService.signOut().then( (userData) => this.store.dispatch(new StateActions.SetAuthState( this.user ) ) );
 	}
 
 	private createKeyVals( obj ) {
