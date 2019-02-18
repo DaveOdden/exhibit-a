@@ -3,6 +3,7 @@ import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { NgRxStore, AppState } from './app.interfaces';
+import * as StateActions from './__state/state.actions';
 
 @Injectable()
 export class AuthGuardService implements CanActivate {
@@ -15,10 +16,12 @@ export class AuthGuardService implements CanActivate {
     let stateLocal: NgRxStore[];
 
     this.store.select('appState').subscribe(s => stateLocal = s);
-    
-    console.log('auth guard: ', localStorage.getItem('token') );
+    const userData = JSON.parse( localStorage.getItem('token') );
+
+    console.log('auth guard: ', userData );
     
     if( localStorage.getItem('token') != null ) {
+      this.store.dispatch(new StateActions.SetAuthState( userData ) );
       return true;
     } else {
       this.router.navigate(['/login'], {

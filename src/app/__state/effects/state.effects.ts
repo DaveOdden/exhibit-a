@@ -29,16 +29,16 @@ export class StateEffects {
 		ofType( StateActionTypes.LOGIN ),
 		map( (action: LogIn) => action.payload ),
     switchMap( googleId => {
-			console.log('3. LogIn Effect');
+			console.log('4A. LogIn Effect');
 			return ( 
 				this.socialAuthService
 				.signIn( googleId )
 				.then( (userData) => {
-					console.log(userData);
+					console.log('   4B. LogIn Effect Promise');
 					return new LogInSuccess( userData );
 				} )
 				.catch((err) => {
-					console.log(err);
+					console.log('   4B. LogIn Effect Catch');
 					return new LogInFailure( err );
 				} )
 			)
@@ -48,9 +48,9 @@ export class StateEffects {
   LogInSuccess: Observable<any> = this.actions.pipe(
     ofType(StateActionTypes.LOGIN_SUCCESS),
     tap((user) => {
-			console.log('in auth effects');
-			console.log(user.payload);
-      localStorage.setItem('token', user.payload.token);
+			console.log('6. Login Success');
+			//console.log(user.payload);
+      localStorage.setItem('token', JSON.stringify(user.payload));
       this.router.navigateByUrl('/status');
     })
   );

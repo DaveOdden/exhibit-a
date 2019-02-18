@@ -32,13 +32,15 @@ export class LogIn implements Action {
 export class LogInSuccess implements Action {
   readonly type = StateActionTypes.LOGIN_SUCCESS;
   constructor(public payload: any) {
-		console.log('Last. Login Success Action constructor');
+		console.log('5. Login Success Action constructor');
 	}
 }
 
 export class LogInFailure implements Action {
   readonly type = StateActionTypes.LOGIN_FAILURE;
-  constructor(public payload: any) { console.log('in login failure'); }
+  constructor(public payload: any) {
+		console.log('in login failure');
+	}
 }
 
 export class SetAuthState implements Action {

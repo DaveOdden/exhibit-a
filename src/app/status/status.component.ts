@@ -17,6 +17,7 @@ export class StatusComponent implements OnInit {
   user;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState> ) {
+    //this.store.dispatch( new StateActions.RestoreSession()
     this.getState();
     this.setHeaderAttributes();
   }
