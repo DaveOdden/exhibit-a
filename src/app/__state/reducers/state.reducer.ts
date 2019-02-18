@@ -41,6 +41,16 @@ export function reducer(state: NgRxStore[] = [storeObj], action: StateActions) {
 		case StateActionTypes.LOGIN:
 			console.log('4. reducer');
 			return state;
+		case StateActionTypes.LOGIN_SUCCESS:
+			const returnLoginSuccessState: NgRxStore[] = _.cloneDeep(state);
+			if (action.payload != null) {
+				returnLoginSuccessState[0].auth = action.payload;
+				return returnLoginSuccessState;
+			} else {
+				let auth = authInitialState;
+				returnLoginSuccessState[0].auth = auth;
+				return returnLoginSuccessState;
+			}
 		case StateActionTypes.SET_AUTH:
 			const returnSetAuthState: NgRxStore[] = _.cloneDeep(state);
 			if (action.payload != null) {

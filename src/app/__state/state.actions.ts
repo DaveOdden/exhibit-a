@@ -31,7 +31,9 @@ export class LogIn implements Action {
 
 export class LogInSuccess implements Action {
   readonly type = StateActionTypes.LOGIN_SUCCESS;
-  constructor(public payload: any) {}
+  constructor(public payload: any) {
+		console.log('Last. Login Success Action constructor');
+	}
 }
 
 export class LogInFailure implements Action {

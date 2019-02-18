@@ -58,8 +58,8 @@ export class LoginComponent implements OnInit {
 	}
 
   googleSignIn() {
-		console.log('1. GoogleSignIn()');
-		this.store.dispatch( new StateActions.LogIn( GoogleLoginProvider.PROVIDER_ID ) );
+		this.store.dispatch(new StateActions.LogIn( GoogleLoginProvider.PROVIDER_ID ) ) 
+		//this.socialAuthService.signIn( GoogleLoginProvider.PROVIDER_ID ).then( (userData) => this.store.dispatch(new StateActions.LogIn( userData ) ) );
 	}
 
 	googleSignOut() {

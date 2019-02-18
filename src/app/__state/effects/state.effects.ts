@@ -26,8 +26,8 @@ export class StateEffects {
 
   @Effect()
   Login: Observable<any> = this.actions.pipe(
-    ofType( StateActionTypes.LOGIN ),
-    map( (action: LogIn) => action.payload ),
+		ofType( StateActionTypes.LOGIN ),
+		map( (action: LogIn) => action.payload ),
     switchMap( googleId => {
 			console.log('3. LogIn Effect');
 			return ( 
@@ -41,7 +41,7 @@ export class StateEffects {
 					console.log(err);
 					return new LogInFailure( err );
 				} )
-			);
+			)
   } ) );
 
   @Effect({ dispatch: false })
