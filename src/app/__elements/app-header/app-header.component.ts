@@ -40,11 +40,14 @@ export class AppHeaderComponent implements OnInit {
   }
 
   public googleSignOut() {
-		this.socialAuthService.signOut().then(
-      (userData) => {
-        console.log(userData);
-      }
-		);
+
+    this.store.dispatch( new StateActions.LogOut( GoogleLoginProvider.PROVIDER_ID ) ) 
+
+		// this.socialAuthService.signOut().then(
+    //   (userData) => {
+    //     console.log(userData);
+    //   }
+		// );
   }
   
   public goToPreviousRoute() {

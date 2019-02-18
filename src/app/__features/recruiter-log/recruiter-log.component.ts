@@ -10,18 +10,19 @@ import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-l
 })
 export class RecruiterLogComponent implements OnInit {
 
-  constructor(private store: Store<AppState>, private socialAuthService: AuthService,) {
+  constructor(private store: Store<AppState>, private socialAuthService: AuthService,) {    
+    this.setHeaderAttributes();
+  }
 
-    this.socialAuthService.authState.subscribe((user) => this.store.dispatch(new StateActions.SetAuthState( user ) ) );
-    
+  ngOnInit() {
+  }
+
+  setHeaderAttributes() {
     this.store.dispatch(new StateActions.ChangeHeaderAttributes({
       title: 'Recruiter Log',
       leftButtonType: 'menu',
       isOffTop: false
-    }) );
-  }
-
-  ngOnInit() {
+    } ) );
   }
 
 }

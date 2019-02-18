@@ -18,10 +18,11 @@ export class NavMenuComponent implements OnInit {
   }
 
   setHeaderAttributes() {
-    this.store.dispatch(new StateActions.ChangeHeaderAttributes({
+    this.store.dispatch( new StateActions.ChangeHeaderAttributes( {
+      title: 'Navigation',
       leftButtonType: 'menu',
       isOffTop: true
-    }) );
+    } ) );
   }
 
 }

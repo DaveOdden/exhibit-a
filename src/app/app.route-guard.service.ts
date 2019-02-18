@@ -12,13 +12,11 @@ export class AuthGuardService implements CanActivate {
   stateStore: Observable<NgRxStore[]>;
 
   canActivate( route: ActivatedRouteSnapshot, state: RouterStateSnapshot ): boolean {
+    
     this.stateStore = this.store.select('appState');
+    this.stateStore.subscribe(s => stateLocal = s);
     let stateLocal: NgRxStore[];
-
-    this.store.select('appState').subscribe(s => stateLocal = s);
     const userData = JSON.parse( localStorage.getItem('token') );
-
-    console.log('auth guard: ', userData );
     
     if( localStorage.getItem('token') != null ) {
       this.store.dispatch(new StateActions.SetAuthState( userData ) );

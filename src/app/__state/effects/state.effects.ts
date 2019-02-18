@@ -13,7 +13,7 @@ import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-l
 //   SignUp, SignUpSuccess, SignUpFailure, LogOut
 // } from '../auth.actions';
 
-import { StateActionTypes, LogIn, LogInSuccess, LogInFailure } from '../state.actions';
+import { StateActionTypes, LogIn, LogInSuccess, LogInFailure, LogOut, LogOutSuccess, LogOutFailure } from '../state.actions';
 
 @Injectable()
 export class StateEffects {
@@ -49,7 +49,6 @@ export class StateEffects {
     ofType(StateActionTypes.LOGIN_SUCCESS),
     tap((user) => {
 			console.log('6. Login Success');
-			//console.log(user.payload);
       localStorage.setItem('token', JSON.stringify(user.payload));
       this.router.navigateByUrl('/status');
     })
@@ -62,10 +61,46 @@ export class StateEffects {
 
   // @Effect({ dispatch: false })
   // public LogOut: Observable<any> = this.actions.pipe(
-  //   ofType(AuthActionTypes.LOGOUT),
+  //   ofType(StateActionTypes.LOGOUT),
   //   tap((user) => {
   //     localStorage.removeItem('token');
   //   })
-  // );
+	// );
+	
+
+	@Effect()
+  LogOut: Observable<any> = this.actions.pipe(
+		ofType( StateActionTypes.LOGOUT ),
+		map( (action: LogOut) => action.payload ),
+    switchMap( googleId => {
+			console.log('4A. LogOut Effect');
+			return ( 
+				this.socialAuthService
+				.signOut()
+				.then( (res) => {
+					console.log('   4B. LogOut Effect Promise');
+					return new LogOutSuccess( res );
+				} )
+				.catch((err) => {
+					console.log('   4B. LogOut Effect Catch');
+					return new LogOutFailure( err );
+				} )
+			)
+	} ) );
+	
+	@Effect({ dispatch: false })
+  LogOutSuccess: Observable<any> = this.actions.pipe(
+    ofType(StateActionTypes.LOGOUT_SUCCESS),
+    tap((user) => {
+			console.log('6. LogOut Success');
+      localStorage.removeItem('token');
+      this.router.navigateByUrl('/login');
+    })
+  );
+
+  @Effect({ dispatch: false })
+  LogOutFailure: Observable<any> = this.actions.pipe(
+    ofType(StateActionTypes.LOGOUT_FAILURE)
+  );
 
 }

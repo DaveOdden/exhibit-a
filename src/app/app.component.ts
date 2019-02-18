@@ -26,8 +26,6 @@ export class AppComponent implements OnInit {
   user;
   
   constructor( private router: Router, private route: ActivatedRoute, private socialAuthService: AuthService, private store: Store<AppState> ) {
-    // listen for router start changes. filter() to navigationStart only and subscribe to changes. pipe is used in order to get filter to work.
-    //router.events.pipe( filter( event => event instanceof NavigationStart) ).subscribe( (val) => this.routerChange() );
   }
 
   ngOnInit() {

@@ -13,7 +13,10 @@ import { SocialUser } from 'angular-6-social-login';
 export enum StateActionTypes {
 	LOGIN = '[AUTH] Login User with Social Service',
 	LOGIN_SUCCESS = '[Auth] Login Success',
-  LOGIN_FAILURE = '[Auth] Login Failure',
+	LOGIN_FAILURE = '[Auth] Login Failure',
+	LOGOUT = '[AUTH] Logout User with Social Service',
+	LOGOUT_SUCCESS = '[Auth] Logout Success',
+  LOGOUT_FAILURE = '[Auth] Logout Failure',
   SET_AUTH = '[AUTH] Set',
   CHANGE_HEADER_BUTTON_TYPE = '[HEADER] Change Button Type',
   CHANGE_HEADER_TITLE = '[HEADER] Change Title',
@@ -38,6 +41,27 @@ export class LogInSuccess implements Action {
 
 export class LogInFailure implements Action {
   readonly type = StateActionTypes.LOGIN_FAILURE;
+  constructor(public payload: any) {
+		console.log('in login failure');
+	}
+}
+
+export class LogOut implements Action {
+	readonly type = StateActionTypes.LOGOUT;
+	constructor(public payload: string) {
+		console.log('2. Login Action constructor');
+	}
+}
+
+export class LogOutSuccess implements Action {
+  readonly type = StateActionTypes.LOGOUT_SUCCESS;
+  constructor(public payload: any) {
+		console.log('5. Login Success Action constructor');
+	}
+}
+
+export class LogOutFailure implements Action {
+  readonly type = StateActionTypes.LOGOUT_FAILURE;
   constructor(public payload: any) {
 		console.log('in login failure');
 	}
@@ -77,6 +101,9 @@ export type StateActions =
 	| LogIn
 	| LogInSuccess
 	| LogInFailure
+	| LogOut
+	| LogOutSuccess
+	| LogOutFailure
 	| RemoveTutorial
 	| ChangeHeaderTitle
 	| ChangeHeaderButtonType
