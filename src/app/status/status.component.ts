@@ -3,6 +3,7 @@ import { AuthService, GoogleLoginProvider } from 'angular-6-social-login';
 import { Store } from '@ngrx/store';
 import { NgRxStore, AppState } from '../app.interfaces';
 import * as StateActions from '../__state/state.actions';
+import { HerokuApiService } from '../__services/heroku.api.service';
 
 @Component({
   selector: 'app-status',
@@ -15,14 +16,21 @@ export class StatusComponent implements OnInit {
 	authIsLoading: boolean = true;
 	userIsLoggedIn: boolean = false;
   user;
+
+  isConnectedToHeroku = false;
   
-  constructor( private socialAuthService: AuthService, private store: Store<AppState> ) {
+  constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
+
     //this.store.dispatch( new StateActions.RestoreSession()
     this.getState();
     this.setHeaderAttributes();
   }
 
   ngOnInit() {
+    this.herokuApi.ping().subscribe((res) => {
+      console.log(res);
+      this.isConnectedToHeroku = res;
+    });
   }
 
   getState() {

@@ -59,15 +59,6 @@ export class StateEffects {
     ofType(StateActionTypes.LOGIN_FAILURE)
   );
 
-  // @Effect({ dispatch: false })
-  // public LogOut: Observable<any> = this.actions.pipe(
-  //   ofType(StateActionTypes.LOGOUT),
-  //   tap((user) => {
-  //     localStorage.removeItem('token');
-  //   })
-	// );
-	
-
 	@Effect()
   LogOut: Observable<any> = this.actions.pipe(
 		ofType( StateActionTypes.LOGOUT ),

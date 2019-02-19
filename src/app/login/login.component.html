@@ -55,7 +55,6 @@
 
   <!-- Authenticated Content -->
   <div *ngIf="userIsLoggedIn">
-    <vaadin-button theme="primary" (click)="googleSignOut()">Sign Out</vaadin-button>
     <h3>Authentication Details</h3>
     <ul class="side-by-side-list">
       <li *ngFor="let item of googleUserData">

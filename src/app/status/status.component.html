@@ -1,5 +1,38 @@
-<div *ngIf="userIsLoggedIn">
-	User is logged in
-</div>
+<ul>
 
-<hr>
+	<!-- Auth -->
+	<li class="status-item">
+		<div class="circular-status-orb" [ngClass]="{'green': userIsLoggedIn, 'red': !userIsLoggedIn }"></div>
+		<div>Authenticated</div>
+	</li>
+	<hr class="collapsed-hr">
+
+	<!-- Heroku -->
+	<li class="status-item">
+		<div class="circular-status-orb" [ngClass]="{'green': isConnectedToHeroku, 'red': !isConnectedToHeroku }"></div>
+		<div>Heroku Connection</div>
+	</li>
+	<hr class="collapsed-hr">
+
+</ul>
+
+
+<!-- <vaadin-list-box>
+
+		<vaadin-item>
+			<div class="status-item">
+				<div class="circular-status-orb" [ngClass]="{'green': userIsLoggedIn, 'red': !userIsLoggedIn }"></div>
+				<div>Authenticated</div>
+			</div>
+		</vaadin-item>
+		<hr class="collapsed-hr">
+	
+		<vaadin-item>
+			<div class="status-item">
+				<div class="circular-status-orb" [ngClass]="{'green': isConnectedToHeroku, 'red': !isConnectedToHeroku }"></div>
+				<div>Heroku Connection</div>
+			</div>
+		</vaadin-item>
+		<hr class="collapsed-hr">
+	
+	</vaadin-list-box> -->

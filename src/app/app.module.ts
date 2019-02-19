@@ -69,6 +69,7 @@ import { reducer } from './__state/reducers/state.reducer';
 import { AuthResolver } from './app.route-resolver';
 import { LocalAuthService } from './__services/auth.service';
 import { AuthGuardService } from './app.route-guard.service';
+import { HerokuApiService } from './__services/heroku.api.service';
 
 import * as secrets from '../../credentials.json';
 import * as _ from 'lodash';
@@ -136,6 +137,7 @@ export function getAuthServiceConfigs() {
     AuthGuardService,
     AuthResolver,
     LocalAuthService,
+    HerokuApiService,
     {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs,
