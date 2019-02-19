@@ -94,7 +94,7 @@ export class StateEffects {
     tap((user) => {
 			console.log('6. LogOut Success');
       localStorage.removeItem('token');
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/login?loggedout=true');
     })
   );
 

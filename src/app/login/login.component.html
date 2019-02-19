@@ -42,6 +42,11 @@
     <div class="alert alert-danger">You must login to see that page.</div>
   </div>
 
+  <!-- Auth Signed Out Message -->
+  <div *ngIf="userJustLoggedOut && !userIsLoggedIn">
+    <div class="alert alert-success">Logged Out.</div>
+  </div>
+
   <!-- Sign In Module -->
   <div *ngIf="!userIsLoggedIn" style="background-color: white">
     <h1>Sign In</h1>

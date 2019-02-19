@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 	viewIsLoading = true;
 	authIsLoading = true;
 	userIsLoggedIn = false;
+	userJustLoggedOut = false;
 	googleUserData = [];
 	user;
 
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
 		this.userIsLoggedIn = authService.isLoggedIn();
 		this.getState();
 		this.setRedirectParam();
+		this.handleLoggedOutQueryString();
 		this.setHeaderAttributes();
 	}
 
@@ -77,6 +79,12 @@ export class LoginComponent implements OnInit {
 			});
 		}
 		return returnVal;
+	}
+
+	handleLoggedOutQueryString() {
+		this.route.queryParams.subscribe(params => {
+			this.userJustLoggedOut = params['loggedout'];
+		} );
 	}
 
 }
