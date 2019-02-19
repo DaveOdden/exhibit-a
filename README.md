@@ -188,11 +188,9 @@ Slow 3G
 
 # Posterity
 
-- TODO: NgRx Flow Chart
 - TODO: How to configure web components
-- TODO: Google Auth Outline
 
-<img src="src/assets/readme/flowcharts/login-flowchart.png" alt="login-flow-chart" />
+<img src="src/assets/readme/flowcharts/login-flowchart2.png" alt="login-flow-chart" />
 
 
 ## Credentials.json
