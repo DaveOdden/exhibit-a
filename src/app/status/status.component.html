@@ -1,29 +1,22 @@
-<!-- <ul>
-	<li class="status-item">
-		<div class="circular-status-orb" [ngClass]="{'green': userIsLoggedIn, 'red': !userIsLoggedIn }"></div>
-		<div>Authenticated</div>
-	</li>
-	<hr class="collapsed-hr">
-	<li class="status-item">
-		<div class="circular-status-orb" [ngClass]="{'green': isConnectedToHeroku, 'red': !isConnectedToHeroku }"></div>
-		<div>Heroku Connection</div>
-	</li>
-</ul> -->
-
 <h3 class="list-heading-text">Connections</h3>
+
 <ul class="individual-item-list">
+
+	<!-- Auth -->
 	<li>
 		<vaadin-item>
 			<div class="status-item">
 				<div class="circular-status-orb" [ngClass]="{'green': userIsLoggedIn, 'red': !userIsLoggedIn }"></div>
 				<div>
-					<div><strong>Authenticated</strong></div>
+					<div><strong>Google Authentication</strong></div>
 					<div><small>{{user.name}}</small></div>
 				</div>
 			</div>
 		</vaadin-item>
 		<hr class="collapsed-hr">
 	</li>
+
+	<!-- Heroku -->
 	<li>
 		<vaadin-item>
 			<div class="status-item">
@@ -34,25 +27,21 @@
 				</div>
 			</div>
 		</vaadin-item>
+		<hr class="collapsed-hr">
 	</li>
+
+	<!-- Mongo -->
+	<li>
+		<vaadin-item>
+			<div class="status-item">
+				<div class="circular-status-orb" [ngClass]="{'green': isConnectedToMongo, 'red': !isConnectedToMongo }"></div>
+				<div>
+					<div><strong>MongoLab DB</strong></div>
+					<div><small>Cryptic Wildwood</small></div>
+				</div>
+			</div>
+		</vaadin-item>
+		<hr class="collapsed-hr">
+	</li>
+
 </ul>
-
-<!-- <vaadin-list-box>
-
-		<vaadin-item>
-			<div class="status-item">
-				<div class="circular-status-orb" [ngClass]="{'green': userIsLoggedIn, 'red': !userIsLoggedIn }"></div>
-				<div>Authenticated</div>
-			</div>
-		</vaadin-item>
-		<hr class="collapsed-hr">
-	
-		<vaadin-item>
-			<div class="status-item">
-				<div class="circular-status-orb" [ngClass]="{'green': isConnectedToHeroku, 'red': !isConnectedToHeroku }"></div>
-				<div>Heroku Connection</div>
-			</div>
-		</vaadin-item>
-		<hr class="collapsed-hr">
-	
-	</vaadin-list-box> -->

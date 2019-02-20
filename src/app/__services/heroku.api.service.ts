@@ -15,9 +15,17 @@ export class HerokuApiService {
     let body = res;
     return body || { };
   }
+  
   ping(): Observable<any> {
     const url = `${this.BASE_URL}/ping`;
     return this.http.get<any>(url).pipe(
       map(this.extractData));
   }
+
+  pingMongo(): Observable<any> {
+    const url = `${this.BASE_URL}/ping-mongo`;
+    return this.http.get<any>(url).pipe(
+      map(this.extractData));
+  }
+
 }

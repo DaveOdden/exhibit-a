@@ -12,33 +12,22 @@ import { Observable } from 'rxjs';
   templateUrl: './status.component.html'
 })
 export class StatusComponent implements OnInit {
-
-  authIsRetrieved: boolean = false;
-	viewIsLoading: boolean = true;
-  authIsLoading: boolean = true;
   
-
 	userIsLoggedIn: boolean = false;
   username: string;
   user;
+
   isConnectedToHeroku = false;
+  isConnectedToMongo = false;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
-
-    //this.store.dispatch( new StateActions.RestoreSession()
     this.getState();
     this.setHeaderAttributes();
-
-    this.store.select('appState').subscribe((state) => {
-      console.log(state);
-    });
   }
 
   ngOnInit() {
-    this.herokuApi.ping().subscribe((res) => {
-      console.log(res);
-      this.isConnectedToHeroku = res;
-    });
+    this.herokuApi.ping().subscribe( (res) => this.isConnectedToHeroku = res );
+    this.herokuApi.pingMongo().subscribe( (res) => this.isConnectedToMongo = res );
   }
 
   getState() {
