@@ -18,7 +18,9 @@ export class StatusComponent implements OnInit {
   user;
 
   isConnectedToHeroku = false;
+  herokuAppName: string;
   isConnectedToMongo = false;
+  mongoDbName: string;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
     this.getState();
@@ -26,8 +28,17 @@ export class StatusComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.herokuApi.ping().subscribe( (res) => this.isConnectedToHeroku = res );
-    this.herokuApi.pingMongo().subscribe( (res) => this.isConnectedToMongo = res );
+
+    this.herokuApi.ping().subscribe( (res) => {
+      this.isConnectedToHeroku = res.success;
+      this.herokuAppName = res.appName;
+    } );
+
+    this.herokuApi.pingMongo().subscribe( (res) => {
+      this.isConnectedToMongo = res.success;
+      this.mongoDbName = res.dbName;
+    } );
+    
   }
 
   getState() {
