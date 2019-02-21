@@ -21,28 +21,17 @@ export class HerokuApiService {
     const url = `${this.BASE_URL}/ping`;
     const http$ = this.http.get<any>(url);
 
-    try {
-      return http$;
-    } catch (err) {
-      console.log(err);
-    }
-
-    /*
-
-          return http$.pipe(
-        catchError( err => {
-          //of(`I caught: ${err}`)
-          return throwError(err);
-        } ),
-        catchError(err => {
-          console.log('caught rethrown error, providing fallback value');
-          return of([]);
-        }),
-        map(this.extractData)
-      );
-
-
-      */
+    return http$.pipe(
+      catchError( err => {
+        //of(`I caught: ${err}`)
+        return throwError(err);
+      } ),
+      catchError(err => {
+        console.log('caught rethrown error, providing fallback value');
+        return of([]);
+      }),
+      map(this.extractData)
+    );
   }
 
   pingMongo(): Observable<any> {
