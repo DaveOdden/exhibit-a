@@ -23,25 +23,34 @@ export class StatusComponent implements OnInit {
   mongoDbName: string;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
-    this.getState();
+    this.setAuthState();
     this.setHeaderAttributes();
   }
 
   ngOnInit() {
+    this.pingHeroku();
+    this.pingMongo();
+  }
 
+  pingHeroku() {
     this.herokuApi.ping().subscribe( (res) => {
       this.isConnectedToHeroku = res.success;
       this.herokuAppName = res.appName;
+    }, ( err ) => {
+      console.log(err);
     } );
+  }
 
+  pingMongo() {
     this.herokuApi.pingMongo().subscribe( (res) => {
       this.isConnectedToMongo = res.success;
       this.mongoDbName = res.dbName;
-    } );
-    
+    }, ( err ) => {
+      console.log(err);
+    } );    
   }
 
-  getState() {
+  setAuthState() {
     this.store.select('appState').subscribe( ( state: NgRxStore[] ) => {
       if(state[0].auth.id != '') {
         this.userIsLoggedIn = true;

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { throwError, of, Observable, ObservableInput } from 'rxjs';
 import { Action } from '@ngrx/store';
-import { tap, map, switchMap } from 'rxjs/operators';
+import { tap, map, switchMap, catchError } from 'rxjs/operators';
 
 import { User } from '../app.interfaces';
 
@@ -11,7 +11,7 @@ export class HerokuApiService {
   private BASE_URL = 'http://localhost:5000';
 
   constructor(private http: HttpClient) {}
-  
+
   private extractData(res: Response) {
     let body = res;
     return body || { };
@@ -19,8 +19,30 @@ export class HerokuApiService {
   
   ping(): Observable<any> {
     const url = `${this.BASE_URL}/ping`;
-    return this.http.get<any>(url).pipe(
-      map(this.extractData));
+    const http$ = this.http.get<any>(url);
+
+    try {
+      return http$;
+    } catch (err) {
+      console.log(err);
+    }
+
+    /*
+
+          return http$.pipe(
+        catchError( err => {
+          //of(`I caught: ${err}`)
+          return throwError(err);
+        } ),
+        catchError(err => {
+          console.log('caught rethrown error, providing fallback value');
+          return of([]);
+        }),
+        map(this.extractData)
+      );
+
+
+      */
   }
 
   pingMongo(): Observable<any> {

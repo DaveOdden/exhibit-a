@@ -23,7 +23,7 @@
 				<div class="circular-status-orb" [ngClass]="{'green': isConnectedToHeroku, 'red': !isConnectedToHeroku }"></div>
 				<div>
 					<div><strong>Heroku API</strong></div>
-					<div><small>{{herokuAppName}}</small></div>
+					<div><small>{{herokuAppName || 'Unable to Connect'}}</small></div>
 					<!-- <div><a href="https://dashboard.heroku.com/apps/cryptic-wildwood-23826" target="_blank">Visit</a></div> -->
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 				<div class="circular-status-orb" [ngClass]="{'green': isConnectedToMongo, 'red': !isConnectedToMongo }"></div>
 				<div>
 					<div><strong>MongoLab DB</strong></div>
-					<div><small>{{mongoDbName}}</small></div>
+					<div><small>{{mongoDbName || 'Unable to Connect'}}</small></div>
 					<!-- <div><a href="https://www.mlab.com/databases/heroku_2wcz3vxw" target="_blank">Visit</a></div> -->
 				</div>
 			</div>

@@ -40,8 +40,8 @@ I want a project to showcase a variety of technologies, techniques and interesti
   - Karma
   - Custom UI Components
   - Router
-  - Route Transitions
-	- Auth Guards for Protected Routes
+    - Animated Route Transitions
+    - Auth Guards for Protected Routes
 - NgRx - State Management
 - Angular Material - Prebuilt Components & Styles
 - HammerJS - Mobile Gesture Support
@@ -216,6 +216,8 @@ If this app is forked or pulled down, it will not successfully build. I have a c
 
 # Captains Log
 
+- 2/20/19: rxjs error handling
+	- https://blog.angular-university.io/rxjs-error-handling/
 - 1/22/19: convert angular cli project to use SCSS
 	- https://github.com/angular/angular-cli/wiki/stories-css-preprocessors
 - 1/20/19: using ngrx for state and authentication
