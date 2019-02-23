@@ -24,6 +24,10 @@ ul {
 	margin: 0;
 }
 
+button {
+	outline: none !important;
+}
+
 .side-by-side-list {
 	padding: 0 2rem;
 }

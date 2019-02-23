@@ -55,7 +55,8 @@ export class LoginComponent implements OnInit {
 	setHeaderAttributes() {
 		this.store.dispatch(new StateActions.ChangeHeaderAttributes({
 			title: 'Login',
-			hideButtons: true
+			hideButtons: true,
+			isOffTop: false
     }) );
 	}
 
