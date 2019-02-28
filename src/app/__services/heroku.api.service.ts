@@ -40,4 +40,10 @@ export class HerokuApiService {
       map(this.extractData));
   }
 
+  getAppStats(): Observable<any> {
+    const url = `${this.BASE_URL}/user-stats`;
+    return this.http.get<any>(url).pipe(
+      map(this.extractData));
+  }
+
 }

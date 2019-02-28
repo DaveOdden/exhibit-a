@@ -5,6 +5,7 @@ import { NgRxStore, AppState, selectAuthState } from '../app.interfaces';
 import * as StateActions from '../__state/state.actions';
 import { HerokuApiService } from '../__services/heroku.api.service';
 import { Observable } from 'rxjs';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-status',
@@ -30,6 +31,7 @@ export class StatusComponent implements OnInit {
   ngOnInit() {
     this.pingHeroku();
     this.pingMongo();
+    this.getLoginFrequency();
   }
 
   pingHeroku() {
@@ -48,6 +50,15 @@ export class StatusComponent implements OnInit {
     }, ( err ) => {
       console.log(err);
     } );    
+  }
+
+  getLoginFrequency() {
+    this.herokuApi.getAppStats().subscribe( (res) => {
+      console.log(res);
+      console.log(formatDate(res[0].frequency[0], 'yyyy/MM/dd', 'en-US')); 
+    }, ( err ) => {
+      console.log(err);
+    } );
   }
 
   setAuthState() {
