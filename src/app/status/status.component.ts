@@ -22,16 +22,18 @@ export class StatusComponent implements OnInit {
   herokuAppName: string;
   isConnectedToMongo = false;
   mongoDbName: string;
+  loginFrequencyDates: Array<Object>;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
     this.setAuthState();
     this.setHeaderAttributes();
+    this.getLoginFrequency();
+
   }
 
   ngOnInit() {
     this.pingHeroku();
     this.pingMongo();
-    this.getLoginFrequency();
   }
 
   pingHeroku() {
@@ -53,9 +55,14 @@ export class StatusComponent implements OnInit {
   }
 
   getLoginFrequency() {
-    this.herokuApi.getAppStats().subscribe( (res) => {
+    this.herokuApi.getLoginFrequency().subscribe( (res) => {
       console.log(res);
-      console.log(formatDate(res[0].frequency[0], 'yyyy/MM/dd', 'en-US')); 
+      let resProps = Object.keys(res.data);
+      this.loginFrequencyDates = [];
+      for ( let prop of resProps) { 
+        this.loginFrequencyDates.push( res.data[prop] );
+      }
+      console.log(this.loginFrequencyDates);
     }, ( err ) => {
       console.log(err);
     } );

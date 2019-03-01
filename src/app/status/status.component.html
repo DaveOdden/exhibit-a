@@ -1,5 +1,4 @@
 <h3 class="list-heading-text">Connections</h3>
-
 <ul class="individual-item-list">
 
 	<!-- Auth -->
@@ -46,4 +45,17 @@
 		<hr class="collapsed-hr">
 	</li>
 
+</ul>
+
+<h3 class="list-heading-text">Login Frequency</h3>
+<ul class="individual-item-list">
+	<li>
+		<vaadin-item>
+			<div class="status-item">
+				<ul class="login-frequency-block-chart-list">
+					<li class="individual-block" *ngFor="let singleDay of loginFrequencyDates" [ngClass]="{'low': (singleDay.quantity > 0), 'medium': singleDay.quantity >= 2, 'high': singleDay.quantity > 6 }"></li>
+				</ul>
+			</div>
+		</vaadin-item>
+	</li>
 </ul>
