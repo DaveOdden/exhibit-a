@@ -40,4 +40,16 @@ export class HerokuApiService {
       map(this.extractData));
   }
 
+  getAppStats(): Observable<any> {
+    const url = `${this.BASE_URL}/user-stats`;
+    return this.http.get<any>(url).pipe(
+      map(this.extractData));
+  }
+
+  getLoginFrequency(): Observable<any> {
+    const url = `${this.BASE_URL}/user-stats/login-frequency/101409675283670090000`;
+    return this.http.get<any>(url).pipe(
+      map(this.extractData));
+  }
+
 }

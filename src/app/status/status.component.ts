@@ -5,6 +5,7 @@ import { NgRxStore, AppState, selectAuthState } from '../app.interfaces';
 import * as StateActions from '../__state/state.actions';
 import { HerokuApiService } from '../__services/heroku.api.service';
 import { Observable } from 'rxjs';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-status',
@@ -21,10 +22,13 @@ export class StatusComponent implements OnInit {
   herokuAppName: string;
   isConnectedToMongo = false;
   mongoDbName: string;
+  loginFrequencyDates: Array<Object>;
   
   constructor( private socialAuthService: AuthService, private store: Store<AppState>, private herokuApi: HerokuApiService ) {
     this.setAuthState();
     this.setHeaderAttributes();
+    this.getLoginFrequency();
+
   }
 
   ngOnInit() {
@@ -48,6 +52,20 @@ export class StatusComponent implements OnInit {
     }, ( err ) => {
       console.log(err);
     } );    
+  }
+
+  getLoginFrequency() {
+    this.herokuApi.getLoginFrequency().subscribe( (res) => {
+      console.log(res);
+      let resProps = Object.keys(res.data);
+      this.loginFrequencyDates = [];
+      for ( let prop of resProps) { 
+        this.loginFrequencyDates.push( res.data[prop] );
+      }
+      console.log(this.loginFrequencyDates);
+    }, ( err ) => {
+      console.log(err);
+    } );
   }
 
   setAuthState() {

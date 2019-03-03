@@ -7,7 +7,7 @@
 }
 
 .individual-item-list {
-  li {
+  & > li {
     background-color: #fff;
   }
 }
@@ -20,4 +20,33 @@
   letter-spacing: .05rem;
   padding: 1rem 0 0 .5rem;
   text-transform: uppercase
+}
+
+
+
+
+
+.login-frequency-block-chart-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+}
+
+.individual-block {
+  width: 10px;
+  height: 10px;
+  background: rgb(238, 238, 238);
+  box-sizing: border-box;
+  margin: .1rem;
+  // border: 1px solid #eee;
+  border-right: none;
+  &.low {
+    background-color: rgb(198, 228, 139) !important;
+  }
+  &.medium {
+    background-color: rgb(123, 201, 111) !important;
+  }
+  &.high {
+    background-color: rgb(25, 97, 39) !important;
+  }
 }
