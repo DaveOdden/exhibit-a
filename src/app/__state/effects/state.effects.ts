@@ -6,6 +6,8 @@ import { Observable, of } from 'rxjs';
 import { tap, map, switchMap, catchError } from 'rxjs/operators';
 //import { LocalAuthService } from '../../__services/auth.service';
 import { AuthService, GoogleLoginProvider, SocialUser } from 'angular-6-social-login';
+import { HerokuApiService } from '../../__services/heroku.api.service';
+
 
 // import {
 //   AuthActionTypes,
@@ -21,7 +23,8 @@ export class StateEffects {
   constructor(
     private actions: Actions,
     private socialAuthService: AuthService, 
-    private router: Router,
+		private router: Router,
+		private herokuApi: HerokuApiService,
   ) {}
 
   @Effect()
@@ -49,8 +52,15 @@ export class StateEffects {
     ofType(StateActionTypes.LOGIN_SUCCESS),
     tap((user) => {
 			console.log('6. Login Success');
+
       localStorage.setItem('token', JSON.stringify(user.payload));
-      this.router.navigateByUrl('/status');
+			this.herokuApi.pingMongo().subscribe( (res) => {
+				console.log(res);
+			}, ( err ) => {
+				console.log(err);
+			}, () => {
+				this.router.navigateByUrl('/status');
+			} ); 
     })
   );
 

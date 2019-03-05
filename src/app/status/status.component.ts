@@ -56,12 +56,13 @@ export class StatusComponent implements OnInit {
 
   getLoginFrequency() {
     this.herokuApi.getLoginFrequency().subscribe( (res) => {
-      console.log(res);
-      let resProps = Object.keys(res.data);
-      this.loginFrequencyDates = [];
-      for ( let prop of resProps) { 
-        this.loginFrequencyDates.push( res.data[prop] );
-      }
+      this.loginFrequencyDates = res;
+      // console.log(res);
+      // let resProps = Object.keys(res.data);
+      // this.loginFrequencyDates = [];
+      // for ( let prop of resProps) { 
+      //   this.loginFrequencyDates.push( res.data[prop] );
+      // }
       console.log(this.loginFrequencyDates);
     }, ( err ) => {
       console.log(err);

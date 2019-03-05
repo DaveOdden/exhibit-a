@@ -27,7 +27,8 @@ import {
   MatCardModule,
   MatMenuModule,
   MatExpansionModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -129,6 +130,7 @@ export function getAuthServiceConfigs() {
     MatMenuModule,
     MatCardModule,
     MatExpansionModule,
+    MatTooltipModule,
     MatProgressSpinnerModule,
     DragDropModule,
     EffectsModule.forRoot([AuthEffects, StateEffects]),

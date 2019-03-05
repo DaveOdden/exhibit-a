@@ -47,7 +47,7 @@ export class HerokuApiService {
   }
 
   getLoginFrequency(): Observable<any> {
-    const url = `${this.BASE_URL}/user-stats/login-frequency/101409675283670090000`;
+    const url = `${this.BASE_URL}/user-stats/login-frequency/block-chart-data/101409675283670090000`;
     return this.http.get<any>(url).pipe(
       map(this.extractData));
   }

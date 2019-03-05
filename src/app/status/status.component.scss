@@ -50,3 +50,17 @@
     background-color: rgb(25, 97, 39) !important;
   }
 }
+
+
+
+
+// .custom-tooltip, .testcl, ::ng-deep .mat-tooltip {
+//   width: 100%;
+//   height: 100%;
+//   background: pink !important;
+//   font-size: 10px !important;
+// }
+
+::ng-deep .mat-tooltip {
+  background: #ddd !important;
+}

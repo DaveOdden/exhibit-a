@@ -53,7 +53,12 @@
 		<vaadin-item>
 			<div class="status-item">
 				<ul class="login-frequency-block-chart-list">
-					<li class="individual-block" *ngFor="let singleDay of loginFrequencyDates" [ngClass]="{'low': (singleDay.quantity > 0), 'medium': singleDay.quantity >= 2, 'high': singleDay.quantity > 6 }"></li>
+					<li class="individual-block"
+							*ngFor="let singleDay of loginFrequencyDates"
+							[ngClass]="{'low': (singleDay.count > 0), 'medium': singleDay.count >= 2, 'high': singleDay.count > 6 }"
+							matTooltip="{{singleDay.count}} Logins"
+							matTooltipPosition="above">
+						</li>
 				</ul>
 			</div>
 		</vaadin-item>
